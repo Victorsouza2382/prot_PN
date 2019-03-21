@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar style="--background: transparent">
+    <ion-title>Trilhas</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--background: url(../../assets/pnbPeB.jpg) no-repeat center center;">
+
+
+  <div class="trilhas" >
+    <ion-card class="cardTrilha" (click)="mostrarT1F()">
+      <h1>Trilha da Capivara</h1>
+      <div *ngIf="mostrarT1">
+        <img src="../../assets/trilhaCapivara.jpg">
+        <ion-card-subtitle padding-top="5px">
+          <h6><span>Extensão:</span> 1.3 Km</h6>
+          <h6><span>Duração:</span> 20 min</h6>
+        </ion-card-subtitle>
+        <ion-buttons justify-content-center margin-bottom="10px">
+          <ion-button expand="block" fill="outline">GO</ion-button>
+        </ion-buttons>
+        <ion-card-content>
+          Esta trilha permite que os visitantes possam conhecer mais sobre as riquezas naturais do Parque, por isso o
+          silêncio é importante.
+          É recomendado o uso de roupas e calçados adequados para caminhada. A trilha está diariamente aberta à
+          visitação.
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+
+  <div class="trilhas">
+    <ion-card class="cardTrilha" (click)="mostrarT2F()">
+      <h1>Trilha Cristal Água</h1>
+      <div *ngIf="mostrarT2">
+
+        <img src="../../assets/trilhaCristal.jpg">
+        <ion-card-subtitle padding-top="5px">
+          <h6><span>Extensão: 5 Km</span></h6>
+          <h6><span>Duração: 1 hora</span></h6>
+        </ion-card-subtitle>
+        <ion-buttons justify-content-center margin-bottom="10px">
+          <ion-button expand="block" fill="outline">GO</ion-button>
+        </ion-buttons>
+        <ion-card-content>
+          Para um pequeno descanso e contemplação da natureza, uma parada com sombra pode ser feita à beira do córrego
+          Cristal Água.
+          A trilha é aberta à visitação todos os dias, das 6h às 15h30.
+        </ion-card-content>
+
+      </div>
+    </ion-card>
+
+  </div>
+
+
+  <div class="trilhas">
+    <ion-card class="cardTrilha" (click)="mostrarT3F()">
+      <h1>Trilha União</h1>
+      <div *ngIf="mostrarT3">
+
+        <img src="../../assets/trilhaUniao.jpg">
+        <ion-card-subtitle padding-top="5px">
+          <h6><span>Extensão: 136 Km</span></h6>
+        </ion-card-subtitle>
+        <ion-buttons justify-content-center margin-bottom="10px">
+          <ion-button expand="block" fill="outline">GO</ion-button>
+        </ion-buttons>
+        <ion-card-content>
+          Recebeu esse nome por unir diversas unidades de conservação do DF como a Floresta Nacional de Brasília, Parque
+          Nacional de Brasília, Reserva Biológica da Contagem, Área de Proteção Ambiental do Planalto Central e do Rio
+          Descoberto.
+        </ion-card-content>
+      </div>
+    </ion-card>
+
+
+
+  </div>
+
+
+
+</ion-content>

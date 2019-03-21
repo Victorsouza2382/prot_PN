@@ -1,0 +1,136 @@
+<ion-header>
+  <ion-toolbar style="--background: transparent">
+    <ion-title>Atrações</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content fullscreen style="--background: url(../../assets/pnbPeB.jpg) no-repeat center center;">
+
+  <div class="atracoes" >
+    <ion-card class="atracoes" >
+      <h1 (click)="mostraPiscinasF()">PISCINAS</h1>
+      <div *ngIf="mostraPiscinas" style="width: 100%">
+        <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
+          <ion-slide style="width: 100%">
+            <ion-card class="cadaAtracao">
+              <img src="../../assets/piscina1.jpg">
+              <ion-card-subtitle padding-top="5px">
+                <h5> Piscina 1 </h5>
+              </ion-card-subtitle>
+              <ion-buttons justify-content-center margin-bottom="10px">
+                <ion-button expand="block" fill="outline" (click)="infoPiscina1F()"> Mais Info
+                </ion-button>
+              </ion-buttons>
+              <ion-card class="infoatracoes" *ngIf="infoPiscina1">
+
+                <p>Informações da Piscina 1</p>
+
+              </ion-card>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide style="width: 100%">
+            <ion-card class="cadaAtracao">
+              <img src="../../assets/piscina2.jpg">
+              <ion-card-subtitle padding-top="5px">
+                <h5> Piscina 2 </h5>
+              </ion-card-subtitle>
+              <ion-buttons justify-content-center margin-bottom="10px">
+                <ion-button expand="block" fill="outline" (click)="infoPiscina2F()"> Mais Info
+                </ion-button>
+              </ion-buttons>
+              <div style="background-color: darkgray">
+                <ion-card class="infoatracoes" *ngIf="infoPiscina2">
+
+                  <p> Informações da Piscina 2 </p>
+
+                </ion-card>
+              </div>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </ion-card>
+  </div>
+
+  <div class="atracoes">
+    <ion-card class="atracoes" >
+      <h1 (click)="mostraOutrasF()">OUTRAS</h1>
+      <div *ngIf="mostraOutras" style="width: 100%">
+        <ion-slides pager="true">
+          <ion-slide>
+            <ion-card class="cadaAtracao">
+              <img src="../../assets/CentroEducacional.jpg">
+              <ion-card-subtitle padding-top="5px">
+                <h5> Centro de Educação Ambiental </h5>
+              </ion-card-subtitle>
+              <ion-buttons justify-content-center margin-bottom="10px">
+                <ion-button expand="block" fill="outline" (click)="infoCentroF()"> Mais Info
+                </ion-button>
+              </ion-buttons>
+              <ion-card class="infoatracoes" *ngIf="infoCentro">
+
+                <p>
+
+                  Imagine ter um espaço aberto para você expor fotografias e vídeos sobre as suas
+                  impressões do
+                  Cerrado e
+                  do
+                  Parque Nacional de Brasília. Imaginou?
+
+                  O Centro de Educação Ambiental esta aberto aos visitantes do Parque Nacional de
+                  Brasília de segunda
+                  à
+                  sexta
+                  feira, das 9 às 16 horas. Os interessados em apresentar seu trabalho deverão
+                  agendar
+                  um horário com
+                  os
+                  técnicos da área de educação ou visitação do parque.
+
+                </p>
+
+              </ion-card>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="cadaAtracao">
+              <img src="../../assets/IlhaDaMeditacao.jpg">
+              <ion-card-subtitle padding-top="5px">
+                <h5> Ilha da Meditação </h5>
+              </ion-card-subtitle>
+              <ion-buttons justify-content-center margin-bottom="10px">
+                <ion-button expand="block" fill="outline" (click)="infoIlhaMeditacaoF()"> Mais Info
+                </ion-button>
+              </ion-buttons>
+              <ion-card class="infoatracoes" *ngIf="infoIlhaMeditacao">
+
+                <p>
+
+                  Esta ilha foi construída a partir do aproveitamento de uma pequena represa
+                  construída para
+                  distribuição e abastecimento e água a alguns espaços de visitação do parque.
+                  Apesar
+                  de ser um
+                  ambiente construído, no local se observa a presença principalmente de aves que
+                  interagem com
+                  ambientes aquáticos.
+
+                </p>
+
+
+              </ion-card>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+
+      </div>
+    </ion-card>
+  </div>
+
+</ion-content>
