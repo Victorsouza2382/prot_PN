@@ -1,13 +1,13 @@
 <ion-header>
-  <ion-toolbar style="--background: tranparent">
+  <ion-toolbar style="--background: transparent">
     <ion-title style="color: #663300; font-weight: bold">Parque Nacional</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen style="--background: url(../../assets/wall.jpg) no-repeat center center;">
+<ion-content fullscreen style="--background: url(../../assets/pnbPeB.jpg) no-repeat center center;">
   <ion-grid>
     <ion-row no-margin>
-      <ion-card (click)="abrirTrilhas()" no-margin>
+      <ion-card (click)="abrirTrilhas()" no-margin class="animated bounceInDown">
         <ion-img [src]="card1.img"></ion-img>
         <!--<ion-card-title>{{card1.titulo}}</ion-card-title>-->
         <ion-card-content>
@@ -18,13 +18,13 @@
 
     <ion-row no-margin>
       <ion-col no-margin >
-        <ion-card class="cardOc" (click)="abrirOcorrencias()" no-margin>
+        <ion-card class="cardOc animated bounceInLeft delay-1s" (click)="abrirOcorrencias()" no-margin>
           <ion-img class="cardOc" [src]="card2.img"></ion-img>
           <!--<ion-card-title class="cardOc">{{card2.titulo}}</ion-card-title>-->
         </ion-card>
       </ion-col>
       <ion-col >
-        <ion-card class="cardAt" (click)="abrirAtracoes()" no-margin>
+        <ion-card class="cardAt animated bounceInRight delay-1s" (click)="abrirAtracoes()" no-margin>
           <ion-img  class="cardAt" [src]="card3.img"></ion-img>
           <!--<ion-card-title class="cardAt">{{card3.titulo}} </ion-card-title>-->
         </ion-card>
@@ -33,13 +33,13 @@
 
     <ion-row no-margin>
       <ion-col no-margin >
-        <ion-card class="cardOc" (click)="abrirIcmbio()" no-margin padding="2px">
+        <ion-card class="cardOc animated bounceInLeft delay-1s" (click)="abrirIcmbio()" no-margin padding="2px">
           <ion-img class="cardOc" [src]="card4.img"></ion-img>
           <!--<ion-card-title class="cardOc">{{card2.titulo}}</ion-card-title>-->
         </ion-card>
       </ion-col>
       <ion-col >
-        <ion-card class="cardAt" (click)="abrirEmergencia()"  no-margin padding="2px">
+        <ion-card class="cardAt animated bounceInRight delay-1s" (click)="abrirEmergencia()"  no-margin padding="2px">
           <ion-img  class="cardAt" [src]="card5.img"></ion-img>
           <!--<ion-card-title class="cardAt">{{card3.titulo}} </ion-card-title>-->
         </ion-card>
@@ -47,7 +47,7 @@
     </ion-row>
 
     <ion-row no-margin>
-      <ion-card (click)="abrirTrilhas()" no-margin>
+      <ion-card class="animated bounceInUp delay-1s" (click)="abrirTrilhas()" no-margin>
         <ion-card-content>
           ==========INFORMAÇÕES===========
         </ion-card-content>

@@ -11,7 +11,7 @@
 
 
 
-  <div class="ocorrencias" >
+  <div class="ocorrencias animated rollIn delay-1s" >
     <ion-card class="ocorrencias" >
       <h1 (click)="verLost()">{{titulo}}</h1>
       <div *ngIf="mostraCardLost" style="width: 100%">
@@ -46,7 +46,7 @@
     </ion-card>
   </div>
 
-  <div class="ocorrencias" >
+  <div class="ocorrencias animated rollIn delay-1s" >
     <ion-card class="ocorrencias" >
       <h1 (click)="verSelvagem()">Animais Selvagens</h1>
       <div *ngIf="mostraCardSelvagem" style="width: 100%">
@@ -81,7 +81,7 @@
     </ion-card>
   </div>
 
-  <div class="ocorrencias" >
+  <div class="ocorrencias animated rollIn delay-1s" >
     <ion-card class="ocorrencias" >
       <h1 (click)="verEspecies()"> Novas Espécies </h1>
       <div *ngIf="mostraCardEspecies" style="width: 100%">
@@ -116,7 +116,7 @@
     </ion-card>
   </div>
 
-  <div class="ocorrencias" >
+  <div class="ocorrencias animated rollIn delay-2s" >
     <ion-card class="ocorrencias" >
       <h1 (click)="verCrimes()"> Crimes Ambientais </h1>
       <div *ngIf="mostraCardCrimes" style="width: 100%">
@@ -151,7 +151,7 @@
     </ion-card>
   </div>
 
-  <div class="ocorrencias" >
+  <div class="ocorrencias animated rollIn delay-2s" >
     <ion-card class="ocorrencias" >
       <h1 (click)="verEstrutura()"> Estrutura do Parque </h1>
       <div *ngIf="mostraCardEstrutura" style="width: 100%">
@@ -194,7 +194,7 @@
   <!--=====================================-->
   <!--Card para adicionar novas ocorrências-->
 
-  <ion-card id="iconeAdd" (click)="addOcorrencias()">
+  <ion-card class="animated rollIn delay-2s" id="iconeAdd" (click)="addOcorrencias()">
     <div id="addOc">
       <ion-icon class="iconAdd" name="add-circle-outline"  justify-content-end></ion-icon>
       <p>Adicionar Ocorrência</p>
