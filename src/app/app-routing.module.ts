@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'trilhas', loadChildren: './trilhas/trilhas.module#TrilhasPageModule' },
   { path: 'icmbio', loadChildren: './icmbio/icmbio.module#IcmbioPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'emergencia', loadChildren: './emergencia/emergencia.module#EmergenciaPageModule' },
 ];
 
 @NgModule({

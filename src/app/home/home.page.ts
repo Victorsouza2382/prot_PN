@@ -41,6 +41,9 @@ export class HomePage {
   abrirIcmbio() {
     this.router.navigateByUrl(`/icmbio`);
   }
+  abrirEmergencia(){
+    this.router.navigateByUrl(`/emergencia`)
+  }
 
 
 }

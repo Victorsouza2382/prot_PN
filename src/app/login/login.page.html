@@ -1,9 +1,42 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+  <ion-toolbar style="--background: transparent">
+    <ion-title>Login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen style="--background: url(../../assets/pnbPeB.jpg) no-repeat center center;">
+
+
+  <ion-grid style="--background: transparent" margin-top="200px">
+    <ion-row justify-content-center>
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+        <ion-card id="cardLogin" style="border: #663300 solid 1px;" padding-bottom="10px">
+
+          <h4>Voluntário Login</h4>
+
+
+          <ion-list id="listaAdiciona">
+
+
+            <ion-item>
+              <ion-input class="cameraOcorrencia" placeholder="Login">
+              </ion-input>
+            </ion-item>
+
+            <ion-item id="desc">
+              <ion-input placeholder="Senha" type="password">
+              </ion-input>
+            </ion-item>
+            <div id="botaoEnviar">
+              <ion-button id="logar" shape="round" fill="outline">Enviar</ion-button>
+            </div>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

@@ -18,13 +18,22 @@ ion-button{
   color: #663300;
 }
 
-ion-button#logar{
+ion-button#ocorrencia{
   justify-self: center;
-  margin-left: 28%;
+  margin-left: 33%;
 }
 
-ion-card#cardLogin{
+ion-card#addOcorrencia{
   background-color: #303030;
   color: white;
   padding-bottom: 0px;
+}
+
+ion-icon#enviarLoc2 {
+  color: rgba(0, 0, 255, .65);
+}
+
+ion-icon#cameraOcorrencia2 {
+  color: #c0c0c0;
+  font-size: 30pt;
 }

@@ -5,5 +5,5 @@ export const CARDS: Card[] = [
     {titulo: 'Ocorrênias', img: '../../assets/ocorrencia2.png'},
     {titulo: 'Atrações', img: '../../assets/atracoes.png'},
     {titulo: 'IcmBio', img: '../../assets/icmbio.png'},
-    {titulo: 'registraOc', img: '../../assets/camera.png'}
+    {titulo: 'Emergência', img: '../../assets/emergencia.png'}
 ]

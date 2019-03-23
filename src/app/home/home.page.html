@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen style="--background: url(../../assets/pnbPeB.jpg) no-repeat center center;">
+<ion-content fullscreen style="--background: url(../../assets/wall.jpg) no-repeat center center;">
   <ion-grid>
     <ion-row no-margin>
       <ion-card (click)="abrirTrilhas()" no-margin>
@@ -39,7 +39,7 @@
         </ion-card>
       </ion-col>
       <ion-col >
-        <ion-card class="cardAt" no-margin>
+        <ion-card class="cardAt" (click)="abrirEmergencia()"  no-margin padding="2px">
           <ion-img  class="cardAt" [src]="card5.img"></ion-img>
           <!--<ion-card-title class="cardAt">{{card3.titulo}} </ion-card-title>-->
         </ion-card>

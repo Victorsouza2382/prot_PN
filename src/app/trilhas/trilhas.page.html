@@ -11,8 +11,8 @@
 
 
   <div class="trilhas" >
-    <ion-card class="cardTrilha" (click)="mostrarT1F()">
-      <h1>Trilha da Capivara</h1>
+    <ion-card class="cardTrilha" >
+      <h1 (click)="mostrarT1F()">Trilha da Capivara</h1>
       <div *ngIf="mostrarT1">
         <img src="../../assets/trilhaCapivara.jpg">
         <ion-card-subtitle padding-top="5px">
@@ -20,7 +20,7 @@
           <h6><span>Duração:</span> 20 min</h6>
         </ion-card-subtitle>
         <ion-buttons justify-content-center margin-bottom="10px">
-          <ion-button expand="block" fill="outline">GO</ion-button>
+          <ion-button shape="round" fill="outline">GO</ion-button>
         </ion-buttons>
         <ion-card-content>
           Esta trilha permite que os visitantes possam conhecer mais sobre as riquezas naturais do Parque, por isso o
@@ -33,8 +33,8 @@
   </div>
 
   <div class="trilhas">
-    <ion-card class="cardTrilha" (click)="mostrarT2F()">
-      <h1>Trilha Cristal Água</h1>
+    <ion-card class="cardTrilha" >
+      <h1 (click)="mostrarT2F()">Trilha Cristal Água</h1>
       <div *ngIf="mostrarT2">
 
         <img src="../../assets/trilhaCristal.jpg">
@@ -43,7 +43,7 @@
           <h6><span>Duração: 1 hora</span></h6>
         </ion-card-subtitle>
         <ion-buttons justify-content-center margin-bottom="10px">
-          <ion-button expand="block" fill="outline">GO</ion-button>
+          <ion-button shape="round" fill="outline">GO</ion-button>
         </ion-buttons>
         <ion-card-content>
           Para um pequeno descanso e contemplação da natureza, uma parada com sombra pode ser feita à beira do córrego
@@ -56,10 +56,9 @@
 
   </div>
 
-
   <div class="trilhas">
-    <ion-card class="cardTrilha" (click)="mostrarT3F()">
-      <h1>Trilha União</h1>
+    <ion-card class="cardTrilha" >
+      <h1 (click)="mostrarT3F()">Trilha União</h1>
       <div *ngIf="mostrarT3">
 
         <img src="../../assets/trilhaUniao.jpg">
@@ -67,7 +66,7 @@
           <h6><span>Extensão: 136 Km</span></h6>
         </ion-card-subtitle>
         <ion-buttons justify-content-center margin-bottom="10px">
-          <ion-button expand="block" fill="outline">GO</ion-button>
+          <ion-button shape="round" fill="outline">GO</ion-button>
         </ion-buttons>
         <ion-card-content>
           Recebeu esse nome por unir diversas unidades de conservação do DF como a Floresta Nacional de Brasília, Parque

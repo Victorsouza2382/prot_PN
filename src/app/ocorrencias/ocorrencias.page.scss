@@ -87,12 +87,17 @@ div.ocorrencias, div#addOc, div#cardAddOc{
   padding-left: 15px;
   padding-right: 15px;
 }
+div#botaoEnviar{
+  width: content-box;
+}
 
 ion-button{
   margin-top: 5px;
-  border: #663300 solid 1px;
-  color: #663300;
+  margin-left: 33%;
   margin-bottom: 10px;
+  justify-self: center;
+
+
 
 }
 

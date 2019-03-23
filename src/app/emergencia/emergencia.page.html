@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar style="--background: transparent">
+    <ion-title>Emergência</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--background: url(../../assets/pnbPeB.jpg) no-repeat center center;">
+
+  <ion-card>
+
+    <div class="botoesEmergencia">
+      <ion-buttons>
+        <ion-button shape="round" fill="outline">Discar 190</ion-button>
+      </ion-buttons>
+    </div>
+
+    <div class="botoesEmergencia">
+      <ion-buttons>
+        <ion-button shape="round" fill="outline">Discar 192</ion-button>
+      </ion-buttons>
+    </div>
+
+    <div class="botoesEmergencia">
+      <ion-buttons>
+        <ion-button shape="round" fill="outline">Polícia Ambiental</ion-button>
+      </ion-buttons>
+    </div>
+
+    <div class="botoesEmergencia">
+      <ion-buttons>
+        <ion-button shape="round" fill="outline" (click)="addOcorrencias()">Enviar Ocorrência</ion-button>
+      </ion-buttons>
+    </div>
+    <div id="cardAddOc" style="margin-top: 0" *ngIf="addOcorrencia">
+      <ion-card id="addOcorrencia" style="border: #663300 solid 1px;">
+
+        <ion-icon id="cameraOcorrencia2" name="md-camera" justify-content-end (click)="abrirCamera()"></ion-icon>
+
+
+        <ion-list id="listaAdiciona">
+
+          <ion-list>
+            <ion-item>
+              <ion-label id="labelSelect">Tipo</ion-label>
+              <ion-select id="selectOc" class="selecionarTipo" placeholder="Selecione">
+                <ion-select-option>
+                  Animais Perdidos
+                </ion-select-option>
+                <ion-select-option>
+                  Animais Selvagens
+                </ion-select-option>
+                <ion-select-option>
+                  Novas Espécies
+                </ion-select-option>
+                <ion-select-option>
+                  Crimes Ambientais
+                </ion-select-option>
+                <ion-select-option>
+                  Estrutura do Parque
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+
+          <ion-item>
+            <ion-input class="cameraOcorrencia" placeholder="Nome da Ocorrência">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Local">
+            </ion-input><ion-icon id="enviarLoc2" name="md-locate" justify-content-end></ion-icon>
+          </ion-item>
+          <ion-item id="desc">
+            <ion-input placeholder="Descrição">
+            </ion-input>
+          </ion-item>
+          <div id="botaoEnviar">
+            <ion-button id="ocorrencia" shape="round" fill="outline">Enviar</ion-button>
+          </div>
+        </ion-list>
+      </ion-card>
+    </div>
+
+
+  </ion-card>
+
+</ion-content>
