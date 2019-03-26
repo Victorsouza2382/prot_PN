@@ -9,7 +9,7 @@
 
 <ion-content fullscreen style="--background: url(../../assets/pnbPeB.jpg) no-repeat center center;">
 
-  <div class="atracoes animated swing delay-1s" >
+  <div class="atracoes animated swing " >
     <ion-card class="atracoes" >
       <h1 (click)="mostraPiscinasF()">PISCINAS</h1>
       <div *ngIf="mostraPiscinas" style="width: 100%">
@@ -20,11 +20,8 @@
               <ion-card-subtitle padding-top="5px">
                 <h5> Piscina 1 </h5>
               </ion-card-subtitle>
-              <ion-buttons justify-content-center margin-bottom="10px">
-                <ion-button shape="round" fill="outline" (click)="infoPiscina1F()"> Mais Info
-                </ion-button>
-              </ion-buttons>
-              <ion-card class="infoatracoes" *ngIf="infoPiscina1">
+
+              <ion-card class="infoatracoes">
 
                 <p>Informações da Piscina 1</p>
 
@@ -38,12 +35,9 @@
               <ion-card-subtitle padding-top="5px">
                 <h5> Piscina 2 </h5>
               </ion-card-subtitle>
-              <ion-buttons justify-content-center margin-bottom="10px">
-                <ion-button shape="round" fill="outline" (click)="infoPiscina2F()"> Mais Info
-                </ion-button>
-              </ion-buttons>
+
               <div style="background-color: darkgray">
-                <ion-card class="infoatracoes" *ngIf="infoPiscina2">
+                <ion-card class="infoatracoes">
 
                   <p> Informações da Piscina 2 </p>
 
@@ -56,7 +50,7 @@
     </ion-card>
   </div>
 
-  <div class="atracoes animated swing delay-1s">
+  <div class="atracoes animated swing ">
     <ion-card class="atracoes" >
       <h1 (click)="mostraOutrasF()">OUTRAS</h1>
       <div *ngIf="mostraOutras" style="width: 100%">
@@ -67,11 +61,8 @@
               <ion-card-subtitle padding-top="5px">
                 <h5> Centro de Educação Ambiental </h5>
               </ion-card-subtitle>
-              <ion-buttons justify-content-center margin-bottom="10px">
-                <ion-button shape="round" fill="outline" (click)="infoCentroF()"> Mais Info
-                </ion-button>
-              </ion-buttons>
-              <ion-card class="infoatracoes" *ngIf="infoCentro">
+
+              <ion-card class="infoatracoes">
 
                 <p>
 
@@ -103,11 +94,8 @@
               <ion-card-subtitle padding-top="5px">
                 <h5> Ilha da Meditação </h5>
               </ion-card-subtitle>
-              <ion-buttons justify-content-center margin-bottom="10px">
-                <ion-button shape="round" fill="outline" (click)="infoIlhaMeditacaoF()"> Mais Info
-                </ion-button>
-              </ion-buttons>
-              <ion-card class="infoatracoes" *ngIf="infoIlhaMeditacao">
+              <
+              <ion-card class="infoatracoes">
 
                 <p>
 

@@ -11,7 +11,7 @@
 
 
 
-  <div class="ocorrencias animated rollIn delay-1s" >
+  <div id="lostAnimals" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
       <h1 (click)="verLost()">{{titulo}}</h1>
       <div *ngIf="mostraCardLost" style="width: 100%">
@@ -46,7 +46,7 @@
     </ion-card>
   </div>
 
-  <div class="ocorrencias animated rollIn delay-1s" >
+  <div id="animaisSelv" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
       <h1 (click)="verSelvagem()">Animais Selvagens</h1>
       <div *ngIf="mostraCardSelvagem" style="width: 100%">
@@ -81,7 +81,7 @@
     </ion-card>
   </div>
 
-  <div class="ocorrencias animated rollIn delay-1s" >
+  <div id="novasEspecies" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
       <h1 (click)="verEspecies()"> Novas Espécies </h1>
       <div *ngIf="mostraCardEspecies" style="width: 100%">
@@ -116,7 +116,7 @@
     </ion-card>
   </div>
 
-  <div class="ocorrencias animated rollIn delay-2s" >
+  <div id="crimes" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
       <h1 (click)="verCrimes()"> Crimes Ambientais </h1>
       <div *ngIf="mostraCardCrimes" style="width: 100%">
@@ -151,7 +151,7 @@
     </ion-card>
   </div>
 
-  <div class="ocorrencias animated rollIn delay-2s" >
+  <div id="estrutura" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
       <h1 (click)="verEstrutura()"> Estrutura do Parque </h1>
       <div *ngIf="mostraCardEstrutura" style="width: 100%">
@@ -194,7 +194,7 @@
   <!--=====================================-->
   <!--Card para adicionar novas ocorrências-->
 
-  <ion-card class="animated rollIn delay-2s" id="iconeAdd" (click)="addOcorrencias()">
+  <ion-card id="iconeAdd" class="animated rollIn"  (click)="addOcorrencias()">
     <div id="addOc">
       <ion-icon class="iconAdd" name="add-circle-outline"  justify-content-end></ion-icon>
       <p>Adicionar Ocorrência</p>
@@ -202,7 +202,7 @@
   </ion-card>
 
   <div id="cardAddOc" style="margin-top: 0" *ngIf="addOcorrencia">
-    <ion-card id="addOcorrencia2" style="border: #663300 solid 1px;">
+    <ion-card id="addOcorrencia" style="border: #663300 solid 1px;">
 
       <ion-icon id="cameraOcorrencia" name="md-camera" justify-content-end (click)="abrirCamera()"></ion-icon>
 
