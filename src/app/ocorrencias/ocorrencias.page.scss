@@ -103,7 +103,7 @@ ion-button{
 
 ion-card.ocorrencias{
   background: rgba(255, 255, 255, .5);
-  color: rgba(0, 0, 0, .7);
+  color: rgba(0, 0, 0, 0.7);
   font-weight: bold;
   font-variant: small-caps;
   font-size: X-large;
@@ -130,7 +130,9 @@ ion-card-title{
 }
 
 ion-card-subtitle{
+  font-weight: normal;
   font-size: medium;
+  text-decoration: underline;
   color: black;
 }
 h5{

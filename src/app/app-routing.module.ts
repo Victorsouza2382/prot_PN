@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'icmbio', loadChildren: './icmbio/icmbio.module#IcmbioPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'emergencia', loadChildren: './emergencia/emergencia.module#EmergenciaPageModule' },
+  { path: 'avisos', loadChildren: './avisos/avisos.module#AvisosPageModule' },
 ];
 
 @NgModule({

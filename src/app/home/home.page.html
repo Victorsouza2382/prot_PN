@@ -1,18 +1,17 @@
 <ion-header>
   <ion-toolbar style="--background: transparent">
+    <ion-icon (click)="mudafundo()" name="settings" style="color: #f25454">  </ion-icon>
     <ion-title style="color: #663300; font-weight: bold">Parque Nacional</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen style="--background: url(../../assets/pnbPeB.jpg) no-repeat center center;">
+<ion-content fullscreen [ngClass]="{'ionContent0': !fundo0, 'ionContent1': fundo1, 'ionContent2': fundo2, 'ionContent3': fundo3, 'ionContent4': fundo4, 'ionContent5': fundo5, 'ionContent6': fundo6, 'ionContent7': fundo7, 'ionContent8': fundo8, 'ionContent9': fundo9}" >
   <ion-grid>
     <ion-row no-margin>
       <ion-card id="trilhas" (click)="abrirTrilhas()" no-margin class="animated bounceInDown">
         <ion-img [src]="card1.img"></ion-img>
         <!--<ion-card-title>{{card1.titulo}}</ion-card-title>-->
-        <ion-card-content>
 
-        </ion-card-content>
       </ion-card>
     </ion-row>
 
@@ -47,10 +46,8 @@
     </ion-row>
 
     <ion-row no-margin>
-      <ion-card id="notificaoes" class="animated bounceInUp delay-1s" (click)="abrirTrilhas()" no-margin>
-        <ion-card-content>
-          ==========NOTIFICAÇÕES==========
-        </ion-card-content>
+      <ion-card id="notificaoes"  (click)="abrirAvisos()" no-margin class="animated bounceInUp delay-1s">
+        <ion-img [src]="card6.img"></ion-img>
       </ion-card>
     </ion-row>
 
