@@ -13,10 +13,10 @@
 
   <div id="lostAnimals" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <h1 (click)="verLost()">{{titulo}}</h1>
+      <div (click)="verLost()"><h1 >{{titulo}}</h1></div>
       <div *ngIf="mostraCardLost" style="width: 100%">
-        <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
-          <ion-slide style="width: 100%">
+        <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
+          <ion-slide style="width: 100%" >
             <ion-card class="cadaOcorrencia">
               <img src="../../assets/ocorrencias/animal-carente1.jpg">
               <ion-card-title> Cachorro Perdido </ion-card-title>
@@ -48,9 +48,9 @@
 
   <div id="animaisSelv" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <h1 (click)="verSelvagem()">Animais Selvagens</h1>
+      <div (click)="verSelvagem()"><h1 >Animais Selvagens</h1></div>
       <div *ngIf="mostraCardSelvagem" style="width: 100%">
-        <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
+        <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
           <ion-slide style="width: 100%">
             <ion-card class="cadaOcorrencia">
               <img src="../../assets/ocorrencias/lobo-guara.jpg">
@@ -83,9 +83,9 @@
 
   <div id="novasEspecies" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <h1 (click)="verEspecies()"> Novas Espécies </h1>
+      <div (click)="verEspecies()"><h1 > Novas Espécies </h1></div>
       <div *ngIf="mostraCardEspecies" style="width: 100%">
-        <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
+        <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
           <ion-slide style="width: 100%">
             <ion-card class="cadaOcorrencia">
               <img src="../../assets/ocorrencias/novaespecie-passarinho.jpg">
@@ -118,9 +118,9 @@
 
   <div id="crimes" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <h1 (click)="verCrimes()"> Crimes Ambientais </h1>
+      <div (click)="verCrimes()"><h1> Crimes Ambientais </h1></div>
       <div *ngIf="mostraCardCrimes" style="width: 100%">
-        <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
+        <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
           <ion-slide style="width: 100%">
             <ion-card class="cadaOcorrencia">
               <img src="../../assets/ocorrencias/crime1.jpg">
@@ -153,9 +153,9 @@
 
   <div id="estrutura" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <h1 (click)="verEstrutura()"> Estrutura do Parque </h1>
+      <div (click)="verEstrutura()"><h1 > Estrutura do Parque </h1></div>
       <div *ngIf="mostraCardEstrutura" style="width: 100%">
-        <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
+        <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
           <ion-slide style="width: 100%">
             <ion-card class="cadaOcorrencia">
               <img src="../../assets/ocorrencias/estrutura-bebedouro.jpg">

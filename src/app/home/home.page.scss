@@ -1,8 +1,8 @@
 .ionContent0 {
-   --background: url(../../assets/fundoapp.jpg) no-repeat center center;
+   --background: url(../../assets/fundoOriginal.png) no-repeat center center;
 }
 .ionContent1 {
-   --background: url(../../assets/fundoapp2.jpg) no-repeat center center;
+   --background: url(../../assets/wall.jpg) no-repeat center center;
 }
 .ionContent2 {
    --background: url(../../assets/fundoapp3.jpg) no-repeat center center;
@@ -26,12 +26,24 @@
    --background: url(../../assets/fundoapp9.jpg) no-repeat center center;
 }
 .ionContent9 {
-   --background: url(../../assets/fundoOriginal.png) no-repeat center center;
+   --background: url(../../assets/fundoapp.jpg) no-repeat center center;
 }
 
 
+div#toolbar {
+  width: content-box;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-
+div#toolbar ion-icon {
+  font-size: x-large;
+  font-weight: bold;
+  color: #f04141;
+  justify-self: end;
+  margin-right: 10px;
+}
 
 
 

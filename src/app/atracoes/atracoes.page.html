@@ -11,7 +11,7 @@
 
   <div class="atracoes animated swing " >
     <ion-card class="atracoes" >
-      <h1 (click)="mostraPiscinasF()">PISCINAS</h1>
+      <div (click)="mostraPiscinasF()"> <h1>PISCINAS</h1> </div>
       <div *ngIf="mostraPiscinas" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
           <ion-slide style="width: 100%">
@@ -52,7 +52,7 @@
 
   <div class="atracoes animated swing ">
     <ion-card class="atracoes" >
-      <h1 (click)="mostraOutrasF()">OUTRAS</h1>
+      <div (click)="mostraOutrasF()"><h1 >OUTRAS</h1></div>
       <div *ngIf="mostraOutras" style="width: 100%">
         <ion-slides pager="true">
           <ion-slide>

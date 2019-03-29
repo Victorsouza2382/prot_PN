@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'emergencia', loadChildren: './emergencia/emergencia.module#EmergenciaPageModule' },
   { path: 'avisos', loadChildren: './avisos/avisos.module#AvisosPageModule' },
+  { path: 'validacao', loadChildren: './validacao/validacao.module#ValidacaoPageModule' },
 ];
 
 @NgModule({

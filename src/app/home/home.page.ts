@@ -67,6 +67,10 @@ export class HomePage {
     this.router.navigateByUrl(`/avisos`)
   }
 
+  abrirValidacao(){
+    this.router.navigateByUrl(`/validacao`)
+  }
+
   mudafundo() {
 
     if (this.alteraFundo === 9) {
