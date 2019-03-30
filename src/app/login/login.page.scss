@@ -1,19 +1,17 @@
 ion-card{
   height: content-box;
-  background: rgba(48, 48, 48, .5);
-
-
+  background: rgba(0, 0, 0, .1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: #663300 solid 1px;
+  border: goldenrod solid 1px;
 }
 
 ion-button{
   margin-top: 10px;
   margin-bottom: 10px;
-  color: #663300;
+  color: goldenrod;
 }
 
 ion-button#logar{
@@ -22,8 +20,15 @@ ion-button#logar{
 }
 
 h4{
-  color: rgba(0, 0, 0, .7);
-  font-weight: bolder;
+  color: goldenrod;
+  font-weight: bold;
   font-variant: small-caps;
-  font-size: X-large;
+  font-size: large;
+
+}
+
+ion-list{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, .1);
 }

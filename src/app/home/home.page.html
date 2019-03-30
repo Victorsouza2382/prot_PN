@@ -1,59 +1,23 @@
 <ion-header>
-  <ion-toolbar style="--background: transparent">
+  <ion-toolbar style="--background: black; color: goldenrod">
     <div id="toolbar">
       <ion-title style="font-weight: bold">Parque Nacional</ion-title>
-      <ion-icon (click)="mudafundo()" name="alert" style="color: #f25454"></ion-icon>
+      <ion-icon (click)="abrirValidacao()" name="alert" style="color: #f25454"></ion-icon>
     </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen [ngClass]="{'ionContent0': !fundo0, 'ionContent1': fundo1, 'ionContent2': fundo2, 'ionContent3': fundo3, 'ionContent4': fundo4, 'ionContent5': fundo5, 'ionContent6': fundo6, 'ionContent7': fundo7, 'ionContent8': fundo8, 'ionContent9': fundo9}" >
+<ion-content style="--background: rgb(51, 51, 51)">
+<!--<ion-content fullscreen [ngClass]="{'ionContent0': !fundo0, 'ionContent1': fundo1, 'ionContent2': fundo2, 'ionContent3': fundo3, 'ionContent4': fundo4, 'ionContent5': fundo5, 'ionContent6': fundo6, 'ionContent7': fundo7, 'ionContent8': fundo8, 'ionContent9': fundo9}" >-->
   <ion-grid>
-    <ion-row no-margin>
-      <ion-card id="trilhas" (click)="abrirTrilhas()" no-margin class="animated bounceInDown">
-        <ion-img [src]="card1.img"></ion-img>
-        <!--<ion-card-title>{{card1.titulo}}</ion-card-title>-->
-
-      </ion-card>
-    </ion-row>
-
-    <ion-row no-margin>
-      <ion-col no-margin >
-        <ion-card id="ocorrencias" class="cardOc animated bounceInLeft delay-1s" (click)="abrirOcorrencias()" no-margin>
-          <ion-img class="cardOc" [src]="card2.img"></ion-img>
-          <!--<ion-card-title class="cardOc">{{card2.titulo}}</ion-card-title>-->
+      <ion-row no-margin *ngFor="let card of cards">
+        <ion-card id="trilhas" [routerLink]="card.url"  no-margin class="animated bounceInDown">
+          <div>
+            <ion-img [src]="card.img"></ion-img>
+            <ion-card-title>{{card.titulo}}</ion-card-title>
+          </div>
         </ion-card>
-      </ion-col>
-      <ion-col >
-        <ion-card id="atracoes" class="cardAt animated bounceInRight delay-1s" (click)="abrirAtracoes()" no-margin>
-          <ion-img  class="cardAt" [src]="card3.img"></ion-img>
-          <!--<ion-card-title class="cardAt">{{card3.titulo}} </ion-card-title>-->
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row no-margin>
-      <ion-col no-margin >
-        <ion-card id="icmbio" class="cardOc animated bounceInLeft delay-1s" (click)="abrirIcmbio()" no-margin padding="2px">
-          <ion-img class="cardOc" [src]="card4.img"></ion-img>
-          <!--<ion-card-title class="cardOc">{{card2.titulo}}</ion-card-title>-->
-        </ion-card>
-      </ion-col>
-      <ion-col >
-        <ion-card id="emergencia" class="cardAt animated bounceInRight delay-1s" (click)="abrirEmergencia()"  no-margin padding="2px">
-          <ion-img  class="cardAt" [src]="card5.img"></ion-img>
-          <!--<ion-card-title class="cardAt">{{card3.titulo}} </ion-card-title>-->
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row no-margin>
-      <ion-card id="notificaoes"  (click)="abrirAvisos()" no-margin class="animated bounceInUp delay-1s">
-        <ion-img [src]="card6.img"></ion-img>
-      </ion-card>
-    </ion-row>
-
-
+      </ion-row>
 
   </ion-grid>
 

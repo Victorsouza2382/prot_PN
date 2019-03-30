@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar style="--background: transparent">
+  <ion-toolbar style="--background: black; color: goldenrod">
     <ion-title>Emergência</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen style="--background: url(../../assets/fundoOriginal.png) no-repeat center center;">
+<ion-content fullscreen style="--background: rgb(51, 51, 51);">
 
   <ion-card>
 
@@ -35,7 +35,7 @@
       </ion-buttons>
     </div>
     <div id="cardAddOc" style="margin-top: 0" *ngIf="addOcorrencia">
-      <ion-card id="addOcorrencia" style="border: #663300 solid 1px;">
+      <ion-card id="addOcorrencia" style="border: goldenrod solid 1px;">
 
         <ion-icon id="cameraOcorrencia2" name="md-camera" justify-content-end (click)="abrirCamera()"></ion-icon>
 

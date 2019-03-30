@@ -5,14 +5,14 @@ div.avisos{
 
 
 
-ion-card.cardTrilha{
-  background: rgba(255, 255, 255, .5);
+ion-card.cardAviso{
+  background: rgba(255, 255, 255, .3);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: #663300 solid 1px;
+  border: goldenrod solid 1px;
 
 }
 h1{

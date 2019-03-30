@@ -1,35 +1,3 @@
-.ionContent0 {
-   --background: url(../../assets/fundoOriginal.png) no-repeat center center;
-}
-.ionContent1 {
-   --background: url(../../assets/wall.jpg) no-repeat center center;
-}
-.ionContent2 {
-   --background: url(../../assets/fundoapp3.jpg) no-repeat center center;
-}
-.ionContent3 {
-   --background: url(../../assets/fundoapp4.jpg) no-repeat center center;
-}
-.ionContent4 {
-   --background: url(../../assets/fundoapp5.jpg) no-repeat center center;
-}
-.ionContent5 {
-   --background: url(../../assets/fundoapp6.jpg) no-repeat center center;
-}
-.ionContent6 {
-   --background: url(../../assets/fundoapp7.jpg) no-repeat center center;
-}
-.ionContent7 {
-   --background: url(../../assets/fundoapp8.jpg) no-repeat center center;
-}
-.ionContent8 {
-   --background: url(../../assets/fundoapp9.jpg) no-repeat center center;
-}
-.ionContent9 {
-   --background: url(../../assets/fundoapp.jpg) no-repeat center center;
-}
-
-
 div#toolbar {
   width: content-box;
   display:flex;
@@ -40,27 +8,48 @@ div#toolbar {
 div#toolbar ion-icon {
   font-size: x-large;
   font-weight: bold;
-  color: #f04141;
+  color: gold;
   justify-self: end;
   margin-right: 10px;
 }
 
 
 
-
+ion-row{
+  margin: 0 5px 10px 5px;
+}
 
 ion-icon{
   color: #0ec254;
 }
 
 ion-card{
-  background: rgba(255, 255, 255, .3);
-  border: #663300 solid 2px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border: goldenrod solid 2px;
+  padding: 5px;
+  margin: 10px 25px 0 25px;
+
+}
+ion-card div{
+  display: inline-flex;
+  align-items: start;
 }
 
 ion-card-title {
-  color: #d33939
+  margin: 2px;
+  color: goldenrod;
+  font-size: medium;
+  justify-self: center;
 }
+
+ion-img{
+  width: 21px;
+  height: 21px;
+  margin-right: 10px;
+  justify-self: center;
+}
+
 
 #trilhas{
   animation-delay: 0s;

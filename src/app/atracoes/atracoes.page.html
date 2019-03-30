@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar style="--background: transparent">
+  <ion-toolbar style="--background: black; color: goldenrod">
     <ion-title>Atrações</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
@@ -7,23 +7,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen style="--background: url(../../assets/fundoOriginal.png) no-repeat center center;">
+<ion-content fullscreen style="--background: rgb(51, 51, 51);">
 
   <div class="atracoes animated swing " >
     <ion-card class="atracoes" >
       <div (click)="mostraPiscinasF()"> <h1>PISCINAS</h1> </div>
       <div *ngIf="mostraPiscinas" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
+
           <ion-slide style="width: 100%">
             <ion-card class="cadaAtracao">
               <img src="../../assets/piscina1.jpg">
               <ion-card-subtitle padding-top="5px">
-                <h5> Piscina 1 </h5>
+                <h5> Piscina Areal </h5>
               </ion-card-subtitle>
 
               <ion-card class="infoatracoes">
 
-                <p>Informações da Piscina 1</p>
+                <p>A piscina Areal fica aberta todos os dias de 8h às 16h. Nestas piscinas, a água e constantemente renovada devido as nascentes localizadas no seu interior ou nas proximidades.</p>
 
               </ion-card>
             </ion-card>
@@ -33,16 +34,14 @@
             <ion-card class="cadaAtracao">
               <img src="../../assets/piscina2.jpg">
               <ion-card-subtitle padding-top="5px">
-                <h5> Piscina 2 </h5>
+                <h5> Piscina Pedreira </h5>
               </ion-card-subtitle>
 
-              <div style="background-color: darkgray">
-                <ion-card class="infoatracoes">
+              <ion-card class="infoatracoes">
 
-                  <p> Informações da Piscina 2 </p>
+                  <p> A piscina Pedreira está disponível somente as quintas-feiras de 8h às 16h. </p>
 
                 </ion-card>
-              </div>
             </ion-card>
           </ion-slide>
         </ion-slides>
@@ -54,7 +53,7 @@
     <ion-card class="atracoes" >
       <div (click)="mostraOutrasF()"><h1 >OUTRAS</h1></div>
       <div *ngIf="mostraOutras" style="width: 100%">
-        <ion-slides pager="true">
+        <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
           <ion-slide>
             <ion-card class="cadaAtracao">
               <img src="../../assets/CentroEducacional.jpg">
@@ -94,7 +93,7 @@
               <ion-card-subtitle padding-top="5px">
                 <h5> Ilha da Meditação </h5>
               </ion-card-subtitle>
-              <
+
               <ion-card class="infoatracoes">
 
                 <p>

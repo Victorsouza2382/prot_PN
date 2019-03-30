@@ -1,15 +1,15 @@
 ion-card{
   height: content-box;
-  background: rgba(255, 255, 255, .5);
-  color: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, .1);
+  color: goldenrod;
   font-weight: bold;
   font-variant: small-caps;
-  font-size: X-large;
+  font-size: medium;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: #663300 solid 1px;
+  border: goldenrod solid 1px;
   padding-bottom: 20px;
   padding-top: 20px;
 }
@@ -17,7 +17,7 @@ ion-card{
 ion-button{
   margin-top: 10px;
   margin-bottom: 10px;
-  color: #663300;
+  color: goldenrod;
 }
 
 ion-button#ocorrencia{

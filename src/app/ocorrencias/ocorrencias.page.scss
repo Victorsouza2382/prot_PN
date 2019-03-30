@@ -12,7 +12,7 @@ ion-card#iconeAdd{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: #663300 solid 1px;
+  border: goldenrod solid 1px;
   margin: 10px 25px 0 25px;
 }
 
@@ -106,21 +106,22 @@ ion-button{
 }
 
 ion-card.ocorrencias{
-  background: rgba(255, 255, 255, .5);
-  color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, .1);
+  color: goldenrod;
   font-weight: bold;
   font-variant: small-caps;
-  font-size: X-large;
+  font-size: medium;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: #663300 solid 1px;
+  border: goldenrod solid 1px;
 
 }
 ion-card h1 {
   font-weight: bolder;
   font-variant: small-caps;
+  font-size: medium;
 }
 div#SubTitle{
   display: flex;
