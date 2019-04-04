@@ -1,38 +1,19 @@
-/*img{
-  width: 640px;
-  height: 200px;
-}*/
 
-
-//ion-card.piscinaBg {
-//  color: black;
-//  font-weight: bolder;
-//  font-variant: small-caps;
-//  font-size: XX-large;
-//
-//
-//  height: 100px;
-//  background: url("../../assets/banners/piscina-banner.png") no-repeat;
-//  background-size: cover;
-//}
-//
-//ion-card.outrasBg {
-//  color: black;
-//  font-weight: bolder;
-//  font-variant: small-caps;
-//  font-size: XX-large;
-//
-//  height: 100px;
-//  background: url("../../assets/banners/outras-banner.png") no-repeat;
-//  background-size: cover;
-//}
 div.atracoes{
   padding-left: 15px;
   padding-right: 15px;
 }
 
+div.divClick{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 ion-slide {
   padding-bottom: 15px;
+
 }
 
 ion-button{
@@ -46,17 +27,19 @@ ion-card.atracoes{
   color: goldenrod;
   font-weight: bold;
   font-variant: small-caps;
-  font-size: X-large;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: goldenrod solid 1px;
+  box-shadow: 2px 2px #2f2f2f;
 }
 
 ion-card h1 {
   font-weight: bolder;
   font-variant: small-caps;
+  font-size: medium;
+  margin-top: 10px;
 }
 div#SubTitle{
   display: flex;
@@ -66,14 +49,12 @@ div#SubTitle{
 }
 
 ion-card-subtitle{
-  font-size: medium;
-  color: black;
-}
-h5{
   padding: 0;
-  font-size: x-large;
+  font-size: medium;
   font-weight: bold;
+  color: #9d3600;
 }
+
 h6 {
   padding: 0;
   margin: 1px;
@@ -97,11 +78,4 @@ ion-card.cadaAtracao{
 
 div.piscinaSlides{
   margin-top: 0px;
-}
-ion-card.infoatracoes{
-  background-color: #989aa2;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 5px;
-  padding-bottom: 0;
 }

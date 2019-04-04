@@ -10,9 +10,9 @@
 <ion-content fullscreen style="--background: rgb(51, 51, 51); no-repeat center center;">
 
 
-  <div class="trilhas animated wobble " >
+  <div class="trilhas animated bounceInDown " >
     <ion-card class="cardTrilha" >
-      <div (click)="mostrarT1F()"> <h1 >Trilha da Capivara</h1> </div>
+      <div class="divClick" (click)="mostrarT1F()"> <h1 >Trilha da Capivara</h1> </div>
       <div *ngIf="mostrarT1">
         <img src="../../assets/trilhaCapivara.jpg">
         <ion-card-subtitle padding-top="5px">
@@ -32,9 +32,9 @@
     </ion-card>
   </div>
 
-  <div class="trilhas animated wobble ">
+  <div class="trilhas animated bounceInDown ">
     <ion-card class="cardTrilha" >
-      <div (click)="mostrarT2F()"><h1 >Trilha Cristal Água</h1></div>
+      <div class="divClick" (click)="mostrarT2F()"><h1 >Trilha Cristal Água</h1></div>
       <div *ngIf="mostrarT2">
 
         <img src="../../assets/trilhaCristal.jpg">
@@ -56,9 +56,9 @@
 
   </div>
 
-  <div class="trilhas animated wobble ">
+  <div class="trilhas animated bounceInDown ">
     <ion-card class="cardTrilha" >
-      <div (click)="mostrarT3F()" ><h1 >Trilha União</h1></div>
+      <div class="divClick" (click)="mostrarT3F()" ><h1 >Trilha União</h1></div>
       <div *ngIf="mostrarT3">
 
         <img src="../../assets/trilhaUniao.jpg">

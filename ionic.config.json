@@ -1,6 +1,8 @@
 {
   "name": "prot_PN",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "f9146df1"
 }

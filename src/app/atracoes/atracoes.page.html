@@ -9,9 +9,9 @@
 
 <ion-content fullscreen style="--background: rgb(51, 51, 51);">
 
-  <div class="atracoes animated swing " >
+  <div class="atracoes animated bounceInDown " >
     <ion-card class="atracoes" >
-      <div (click)="mostraPiscinasF()"> <h1>PISCINAS</h1> </div>
+      <div class="divClick" (click)="mostraPiscinasF()"> <h1>PISCINAS</h1> </div>
       <div *ngIf="mostraPiscinas" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
 
@@ -19,14 +19,14 @@
             <ion-card class="cadaAtracao">
               <img src="../../assets/piscina1.jpg">
               <ion-card-subtitle padding-top="5px">
-                <h5> Piscina Areal </h5>
+                Piscina Areal
               </ion-card-subtitle>
 
-              <ion-card class="infoatracoes">
-
-                <p>A piscina Areal fica aberta todos os dias de 8h às 16h. Nestas piscinas, a água e constantemente renovada devido as nascentes localizadas no seu interior ou nas proximidades.</p>
-
-              </ion-card>
+              <div class="infoatracoes">
+                <p>
+                  A piscina Areal fica aberta todos os dias de 8h às 16h. Nestas piscinas, a água e constantemente renovada devido as nascentes localizadas no seu interior ou nas proximidades.
+                </p>
+              </div>
             </ion-card>
           </ion-slide>
 
@@ -34,14 +34,14 @@
             <ion-card class="cadaAtracao">
               <img src="../../assets/piscina2.jpg">
               <ion-card-subtitle padding-top="5px">
-                <h5> Piscina Pedreira </h5>
+                Piscina Pedreira
               </ion-card-subtitle>
 
-              <ion-card class="infoatracoes">
-
-                  <p> A piscina Pedreira está disponível somente as quintas-feiras de 8h às 16h. </p>
-
-                </ion-card>
+              <div class="infoatracoes">
+                <p>
+                  A piscina Pedreira está disponível somente as quintas-feiras de 8h às 16h.
+                </p>
+              </div>
             </ion-card>
           </ion-slide>
         </ion-slides>
@@ -49,22 +49,19 @@
     </ion-card>
   </div>
 
-  <div class="atracoes animated swing ">
+  <div class="atracoes animated bounceInDown ">
     <ion-card class="atracoes" >
-      <div (click)="mostraOutrasF()"><h1 >OUTRAS</h1></div>
+      <div class="divClick" (click)="mostraOutrasF()"><h1 >OUTRAS</h1></div>
       <div *ngIf="mostraOutras" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
           <ion-slide>
             <ion-card class="cadaAtracao">
               <img src="../../assets/CentroEducacional.jpg">
               <ion-card-subtitle padding-top="5px">
-                <h5> Centro de Educação Ambiental </h5>
+                Centro de Educação Ambiental
               </ion-card-subtitle>
-
-              <ion-card class="infoatracoes">
-
+              <div class="infoatracoes">
                 <p>
-
                   Imagine ter um espaço aberto para você expor fotografias e vídeos sobre as suas
                   impressões do
                   Cerrado e
@@ -80,10 +77,8 @@
                   um horário com
                   os
                   técnicos da área de educação ou visitação do parque.
-
                 </p>
-
-              </ion-card>
+              </div>
             </ion-card>
           </ion-slide>
 
@@ -91,13 +86,11 @@
             <ion-card class="cadaAtracao">
               <img src="../../assets/IlhaDaMeditacao.jpg">
               <ion-card-subtitle padding-top="5px">
-                <h5> Ilha da Meditação </h5>
+                Ilha da Meditação
               </ion-card-subtitle>
 
-              <ion-card class="infoatracoes">
-
+              <div class="infoatracoes">
                 <p>
-
                   Esta ilha foi construída a partir do aproveitamento de uma pequena represa
                   construída para
                   distribuição e abastecimento e água a alguns espaços de visitação do parque.
@@ -106,11 +99,8 @@
                   ambiente construído, no local se observa a presença principalmente de aves que
                   interagem com
                   ambientes aquáticos.
-
                 </p>
-
-
-              </ion-card>
+              </div>
             </ion-card>
           </ion-slide>
         </ion-slides>

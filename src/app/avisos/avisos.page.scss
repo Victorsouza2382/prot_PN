@@ -7,13 +7,12 @@ div.avisos{
 
 ion-card.cardAviso{
   background: rgba(255, 255, 255, .3);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: goldenrod solid 1px;
-
+  box-shadow: 2px 2px #2f2f2f;
 }
 h1{
   font-weight: bold;

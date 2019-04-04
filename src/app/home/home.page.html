@@ -8,10 +8,9 @@
 </ion-header>
 
 <ion-content style="--background: rgb(51, 51, 51)">
-<!--<ion-content fullscreen [ngClass]="{'ionContent0': !fundo0, 'ionContent1': fundo1, 'ionContent2': fundo2, 'ionContent3': fundo3, 'ionContent4': fundo4, 'ionContent5': fundo5, 'ionContent6': fundo6, 'ionContent7': fundo7, 'ionContent8': fundo8, 'ionContent9': fundo9}" >-->
   <ion-grid>
       <ion-row no-margin *ngFor="let card of cards">
-        <ion-card id="trilhas" [routerLink]="card.url"  no-margin class="animated bounceInDown">
+        <ion-card id="cards" [routerLink]="card.url"  no-margin class="animated bounceInDown">
           <div>
             <ion-img [src]="card.img"></ion-img>
             <ion-card-title>{{card.titulo}}</ion-card-title>
@@ -21,26 +20,5 @@
 
   </ion-grid>
 
-
-  <!--<ion-grid>-->
-
-  <!--<ion-row>-->
-  <!--<ion-col *ngFor="let card of cards">-->
-  <!--<ion-card>-->
-  <!--<ion-img [src]="card.imagem[0].url"></ion-img>-->
-  <!--<ion-title>{{ card.titulo}}</ion-title>-->
-  <!--</ion-card>-->
-  <!--</ion-col>-->
-  <!--</ion-row>-->
-
-  <!--</ion-grid>-->
-
-  <!--<ion-row>-->
-  <!--<ion-col>-->
-  <!--<ion-card (click)="abrirTrilhas()">-->
-  <!--<ion-img [src]="cards[0].imagem[0].url"></ion-img>-->
-  <!--</ion-card>-->
-  <!--</ion-col>-->
-  <!--</ion-row>-->
 
 </ion-content>

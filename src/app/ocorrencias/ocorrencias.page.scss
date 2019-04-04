@@ -7,7 +7,6 @@ ion-card#iconeAdd{
   color: rgba(0, 0, 0, .7);
   font-weight: bold;
   font-variant: small-caps;
-  font-size: X-large;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,10 +16,6 @@ ion-card#iconeAdd{
 }
 
 div#addOc{
-  //width: 100%;
-  //background: rgba(255, 255, 255, .5);
-  //margin-right: 2px;
-  //margin-left: 2px;
   font-variant: small-caps;
   display: flex;
   flex-direction: row;
@@ -31,13 +26,13 @@ div#addOc{
 }
 ion-icon.iconAdd{
   color: #d30c03;
-  font-size: xx-large;
+  font-size: x-large;
   font-weight: bold;
   margin-right: 5px;
 }
 div p {
   color: #d30c03;
-  font-size: 14pt;
+  font-size: 11pt;
   font-weight: bold;
 }
 /* ==================== */
@@ -97,12 +92,16 @@ ion-slide{
 
 ion-button{
   margin-top: 5px;
-  margin-left: 33%;
+  margin-left: 25%;
   margin-bottom: 10px;
   justify-self: center;
+}
 
-
-
+div.divClick{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ion-card.ocorrencias{
@@ -116,12 +115,13 @@ ion-card.ocorrencias{
   justify-content: center;
   align-items: center;
   border: goldenrod solid 1px;
-
+  box-shadow: 2px 2px #2f2f2f;
 }
 ion-card h1 {
   font-weight: bolder;
   font-variant: small-caps;
   font-size: medium;
+  margin-top: 10px;
 }
 div#SubTitle{
   display: flex;
@@ -132,6 +132,7 @@ div#SubTitle{
 ion-card-title{
   font-weight: bold;
   margin-top: 10px;
+  color: #9d3600;
 }
 
 ion-card-subtitle{

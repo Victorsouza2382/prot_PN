@@ -5,6 +5,8 @@ div#toolbar {
   align-items: center;
 }
 
+
+
 div#toolbar ion-icon {
   font-size: x-large;
   font-weight: bold;
@@ -51,33 +53,12 @@ ion-img{
 }
 
 
-#trilhas{
+#cards {
   animation-delay: 0s;
   -moz-animation-delay: 0s;
   -webkit-animation-delay: 0s;
+
+  box-shadow: 2px 2px #2f2f2f;
 }
-#atracoes{
-  animation-delay: 0.2s;
-  -moz-animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
-}
-#ocorrencias{
-  animation-delay: 0.2s;
-  -moz-animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
-}
-#icmbio{
-  animation-delay: 0.2s;
-  -moz-animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
-}
-#emergencia{
-  animation-delay: 0.2s;
-  -moz-animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
-}
-#notificacoes{
-  animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  -webkit-animation-delay: 0s;
-}
+
+

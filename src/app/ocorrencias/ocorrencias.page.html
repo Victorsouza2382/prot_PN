@@ -13,7 +13,7 @@
 
   <div id="lostAnimals" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <div (click)="verLost()"><h1 >{{titulo}}</h1></div>
+      <div class="divClick" (click)="verLost()"><h1 >{{titulo}}</h1></div>
       <div *ngIf="mostraCardLost" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
           <ion-slide style="width: 100%" >
@@ -48,7 +48,7 @@
 
   <div id="animaisSelv" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <div (click)="verSelvagem()"><h1 >Animais Selvagens</h1></div>
+      <div class="divClick"  (click)="verSelvagem()"><h1 >Animais Selvagens</h1></div>
       <div *ngIf="mostraCardSelvagem" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
           <ion-slide style="width: 100%">
@@ -83,7 +83,7 @@
 
   <div id="novasEspecies" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <div (click)="verEspecies()"><h1 > Novas Espécies </h1></div>
+      <div class="divClick"  (click)="verEspecies()"><h1 > Novas Espécies </h1></div>
       <div *ngIf="mostraCardEspecies" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
           <ion-slide style="width: 100%">
@@ -118,7 +118,7 @@
 
   <div id="crimes" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <div (click)="verCrimes()"><h1> Crimes Ambientais </h1></div>
+      <div class="divClick"  (click)="verCrimes()"><h1> Crimes Ambientais </h1></div>
       <div *ngIf="mostraCardCrimes" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
           <ion-slide style="width: 100%">
@@ -153,7 +153,7 @@
 
   <div id="estrutura" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <div (click)="verEstrutura()"><h1 > Estrutura do Parque </h1></div>
+      <div class="divClick"  (click)="verEstrutura()"><h1 > Estrutura do Parque </h1></div>
       <div *ngIf="mostraCardEstrutura" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
           <ion-slide style="width: 100%">
@@ -202,7 +202,7 @@
   </ion-card>
 
   <div id="cardAddOc" style="margin-top: 0" *ngIf="addOcorrencia">
-    <ion-card id="addOcorrencia" style="border: #663300 solid 1px;">
+    <ion-card id="addOcorrencia">
 
       <ion-icon id="cameraOcorrencia" name="md-camera" justify-content-end (click)="abrirCamera()"></ion-icon>
 
