@@ -48,88 +48,12 @@ export class HomePage {
 
   }
 
-  abrirOcorrencias() {
-    this.router.navigateByUrl(`/ocorrencias`);
-  }
-  abrirTrilhas() {
-    this.router.navigateByUrl(`/trilhas`);
-  }
-  abrirAtracoes() {
-    this.router.navigateByUrl(`/atracoes`);
-  }
-  abrirIcmbio() {
-    this.router.navigateByUrl(`/icmbio`);
-  }
-  abrirEmergencia(){
-    this.router.navigateByUrl(`/emergencia`)
-  }
-  abrirAvisos(){
-    this.router.navigateByUrl(`/avisos`)
-  }
+
 
   abrirValidacao(){
     this.router.navigateByUrl(`/validacao`)
   }
 
-  mudafundo() {
-
-    if (this.alteraFundo === 9) {
-      this.alteraFundo = -1;
-    }
-
-    this.alteraFundo++;
-
-    if (this.alteraFundo === 0) {
-      this.fundo9 = !this.fundo9;
-      this.fundo0 = !this.fundo0
-    } else {
-      if (this.alteraFundo === 1) {
-        this.fundo0 = !this.fundo0;
-        this.fundo1 = !this.fundo1
-      } else {
-        if (this.alteraFundo === 2) {
-          this.fundo1 = !this.fundo1;
-          this.fundo2 = !this.fundo2
-        } else {
-          if (this.alteraFundo === 3) {
-            this.fundo2 = !this.fundo2;
-            this.fundo3 = !this.fundo3;
-          } else {
-            if (this.alteraFundo === 4) {
-              this.fundo3 = !this.fundo3;
-              this.fundo4 = !this.fundo4;
-            } else {
-              if (this.alteraFundo === 5){
-                this.fundo4 = !this.fundo4;
-                this.fundo5 = !this.fundo5;
-              } else {
-                if (this.alteraFundo === 6) {
-                  this.fundo5 = !this.fundo5;
-                  this.fundo6 = !this.fundo6;
-                } else {
-                  if (this.alteraFundo === 7) {
-                    this.fundo6 = !this.fundo6;
-                    this.fundo7 = !this.fundo7;
-                } else {
-                    if (this.alteraFundo === 8) {
-                      this.fundo7 = !this.fundo7;
-                      this.fundo8 = !this.fundo8;
-                  } else {
-                      if (this.alteraFundo === 9) {
-                        this.fundo8 = !this.fundo8;
-                        this.fundo9 = !this.fundo9;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-
-    }
-  }
 
 
 }
