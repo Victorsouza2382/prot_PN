@@ -6,10 +6,6 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content fullscreen style="--background: rgb(51, 51, 51);">
-
-  <div class="atracoes animated bounceInDown " >
     <ion-card class="atracoes" >
       <div class="divClick" (click)="mostraPiscinasF()"> <h1>PISCINAS</h1> </div>
       <div *ngIf="mostraPiscinas" style="width: 100%">
@@ -47,6 +43,10 @@
         </ion-slides>
       </div>
     </ion-card>
+
+<ion-content fullscreen style="--background: rgb(51, 51, 51);">
+
+  <div class="atracoes animated bounceInDown " >
   </div>
 
   <div class="atracoes animated bounceInDown ">
