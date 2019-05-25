@@ -6,7 +6,13 @@ export const environment = {
   production: false,
 
   firebaseConfig : {
-
+    apiKey: "AIzaSyCeK5Q76aubhUDgaVD1G4q37JODj0F_kjA",
+    authDomain: "parquenacional-63888.firebaseapp.com",
+    databaseURL: "https://parquenacional-63888.firebaseio.com",
+    projectId: "parquenacional-63888",
+    storageBucket: "parquenacional-63888.appspot.com",
+    messagingSenderId: "854466265316",
+    appId: "1:854466265316:web:ffc78525a8d47611"
   }
 };
 

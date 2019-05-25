@@ -10,7 +10,7 @@
 <ion-content fullscreen style="--background: rgb(51, 51, 51)">
 
 
-
+<!--  CARD ANIMAIS PERDIDOS-->
   <div id="lostAnimals" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
       <div class="divClick" (click)="verLost()"><h1 >Animais Perdidos</h1></div>
@@ -147,7 +147,7 @@
         <ion-list>
           <ion-item>
             <ion-label id="labelSelect">Tipo</ion-label>
-            <ion-select id="selectOc" class="selecionarTipo" placeholder="Selecione" [(ngModel)]="ocorrencia.tipo" required>
+            <ion-select placeholder="Selecione" [(ngModel)]="ocorrencia.tipo" required>
               <ion-select-option value="Animal Perdido">
                 Animais Perdidos
               </ion-select-option>
@@ -168,7 +168,7 @@
         </ion-list>
 
         <ion-item>
-          <ion-input class="cameraOcorrencia" placeholder="Nome da Ocorrência" [(ngModel)]="ocorrencia.nomeOcorrencia" clearInput required>
+          <ion-input placeholder="Nome da Ocorrência" [(ngModel)]="ocorrencia.nomeOcorrencia" clearInput required>
           </ion-input>
         </ion-item>
         <ion-item>

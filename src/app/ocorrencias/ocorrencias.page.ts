@@ -26,6 +26,8 @@ export class OcorrenciasPage implements OnInit {
    descricao: ''
    };
 
+  public alterarTipo: string;
+
   public id = null;
   private ocorrencias: Observable<Ocorrencia[]>;
 
@@ -65,20 +67,31 @@ export class OcorrenciasPage implements OnInit {
 
 
 
+
   verLost() {
     this.mostraCardLost = !this.mostraCardLost;
+    this.alterarTipo = 'Nova Especie';
+    this.firebaseService.alterarTipo(this.alterarTipo);
   }
   verSelvagem() {
     this.mostraCardSelvagem = !this.mostraCardSelvagem;
+    this.alterarTipo = 'Animal Selvagem';
+    this.firebaseService.alterarTipo(this.alterarTipo);
   }
   verCrimes() {
     this.mostraCardCrimes = !this.mostraCardCrimes;
+    this.alterarTipo = 'Crimes Ambientais';
+    this.firebaseService.alterarTipo(this.alterarTipo);
   }
   verEstrutura() {
     this.mostraCardEstrutura = !this.mostraCardEstrutura;
+    this.alterarTipo = 'Estrutura do Parque';
+    this.firebaseService.alterarTipo(this.alterarTipo);
   }
   verEspecies() {
     this.mostraCardEspecies = !this.mostraCardEspecies;
+    this.alterarTipo = 'Nova Especie';
+    this.firebaseService.alterarTipo(this.alterarTipo);
   }
   addOcorrencias() {
     this.addOcorrencia = !this.addOcorrencia;

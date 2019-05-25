@@ -6,6 +6,62 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<ion-content fullscreen style="--background: rgb(51, 51, 51);">
+
+
+  <div class="atracoes animated bounceInDown " >
+    <ion-card class="atracoes" >
+      <div class="divClick" (click)="mostraEventosF()"> <h1>EVENTOS</h1> </div>
+      <div *ngIf="mostraEventos" style="width: 100%">
+        <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
+
+          <ion-slide style="width: 100%">
+            <ion-card class="cadaAtracao">
+              <img src="">
+              <ion-card-subtitle padding-top="5px">
+                Evento Tal
+              </ion-card-subtitle>
+
+              <div class="infoatracoes">
+                <p>
+                  Descrção do Evento
+                </p>
+              </div>
+              <div class="dataEvento">
+                <p>
+                  Data e inicio e fim.
+                </p>
+              </div>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide style="width: 100%">
+            <ion-card class="cadaAtracao">
+              <img src="">
+              <ion-card-subtitle padding-top="5px">
+                Evento Tal 2
+              </ion-card-subtitle>
+
+              <div class="infoatracoes">
+                <p>
+                  Descrção do Evento
+                </p>
+              </div>
+              <div class="dataEvento">
+                <p>
+                  Data e inicio e fim.
+                </p>
+              </div>
+            </ion-card>
+          </ion-slide>
+
+        </ion-slides>
+      </div>
+    </ion-card>
+  </div>
+
+  <div class="atracoes animated bounceInDown " >
     <ion-card class="atracoes" >
       <div class="divClick" (click)="mostraPiscinasF()"> <h1>PISCINAS</h1> </div>
       <div *ngIf="mostraPiscinas" style="width: 100%">
@@ -43,16 +99,44 @@
         </ion-slides>
       </div>
     </ion-card>
-
-<ion-content fullscreen style="--background: rgb(51, 51, 51);">
-
-  <div class="atracoes animated bounceInDown " >
   </div>
 
   <div class="atracoes animated bounceInDown ">
     <ion-card class="atracoes" >
-      <div class="divClick" (click)="mostraOutrasF()"><h1 >OUTRAS</h1></div>
-      <div *ngIf="mostraOutras" style="width: 100%">
+      <div class="divClick" (click)="mostraIlhaF()"><h1 >Ilha da Meditação</h1></div>
+      <div *ngIf="mostraIlha" style="width: 100%">
+        <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
+          <ion-slide>
+            <ion-card class="cadaAtracao">
+              <img src="../../assets/IlhaDaMeditacao.jpg">
+              <ion-card-subtitle padding-top="5px">
+                Ilha da Meditação
+              </ion-card-subtitle>
+
+              <div class="infoatracoes">
+                <p>
+                  Esta ilha foi construída a partir do aproveitamento de uma pequena represa
+                  construída para
+                  distribuição e abastecimento e água a alguns espaços de visitação do parque.
+                  Apesar
+                  de ser um
+                  ambiente construído, no local se observa a presença principalmente de aves que
+                  interagem com
+                  ambientes aquáticos.
+                </p>
+              </div>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+
+      </div>
+    </ion-card>
+  </div>
+
+  <div class="atracoes animated bounceInDown ">
+    <ion-card class="atracoes" >
+      <div class="divClick" (click)="mostraCentroF()"><h1>Centro de Educação</h1></div>
+      <div *ngIf="mostraCentro" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
           <ion-slide>
             <ion-card class="cadaAtracao">
@@ -81,32 +165,11 @@
               </div>
             </ion-card>
           </ion-slide>
-
-          <ion-slide>
-            <ion-card class="cadaAtracao">
-              <img src="../../assets/IlhaDaMeditacao.jpg">
-              <ion-card-subtitle padding-top="5px">
-                Ilha da Meditação
-              </ion-card-subtitle>
-
-              <div class="infoatracoes">
-                <p>
-                  Esta ilha foi construída a partir do aproveitamento de uma pequena represa
-                  construída para
-                  distribuição e abastecimento e água a alguns espaços de visitação do parque.
-                  Apesar
-                  de ser um
-                  ambiente construído, no local se observa a presença principalmente de aves que
-                  interagem com
-                  ambientes aquáticos.
-                </p>
-              </div>
-            </ion-card>
-          </ion-slide>
         </ion-slides>
 
       </div>
     </ion-card>
   </div>
+
 
 </ion-content>

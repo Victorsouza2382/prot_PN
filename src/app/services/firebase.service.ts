@@ -9,12 +9,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FirebaseService {
-
+  public tipo = 'Animal Perdido';
   private ocorrencias: Observable<Ocorrencia[]>;
   private ocorrenciaCollection: AngularFirestoreCollection<Ocorrencia>;
 
+
   constructor(private afs: AngularFirestore) {
-    this. ocorrenciaCollection = this.afs.collection<Ocorrencia>('ocorrencias', ref => ref.orderBy('nomeOcorrencia'));
+    this. ocorrenciaCollection = this.afs.collection<Ocorrencia>('ocorrencias', ref => ref.where('tipo', '==', `${this.tipo}`));
     this.ocorrencias = this.ocorrenciaCollection.snapshotChanges().pipe(
         map(actions => {
           return actions.map(a => {
@@ -22,12 +23,21 @@ export class FirebaseService {
             const id = a.payload.doc.id;
             return {id, ...data}
           })
-        }))
+        }));
   }
+
+  alterarTipo(tipo): void {
+      this.tipo = tipo;
+      console.log(this.tipo)
+
+  //    Consigo trazer o valor até aqui! Agora falta eu conseguir passar ele para o this.tipo!
+  }
+
 
     getOcorrencias(): Observable<Ocorrencia[]>{
         return this.ocorrencias
     }
+
 
     getOcorrencia(id: string): Observable<Ocorrencia>{
         return this.ocorrenciaCollection.doc<Ocorrencia>(id).valueChanges().pipe(

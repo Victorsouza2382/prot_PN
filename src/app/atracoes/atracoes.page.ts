@@ -7,37 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AtracoesPage implements OnInit {
   slideOpts = {effect: 'flip'};
-  infoCentro = false;
-  infoIlhaMeditacao = false;
-  infoPiscina1 = false;
-  infoPiscina2 = false;
+
+  mostraCentro = false;
+  mostraIlha = false;
   mostraPiscinas = false;
-  mostraOutras = false;
+  mostraEventos = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  infoCentroF() {
-    this.infoCentro = !this.infoCentro
-  }
-  infoIlhaMeditacaoF(){
-    this.infoIlhaMeditacao = !this.infoIlhaMeditacao
-  }
 
-  infoPiscina1F(){
-    this.infoPiscina1 = !this.infoPiscina1
-  }
-
-  infoPiscina2F(){
-    this.infoPiscina2 = !this.infoPiscina2
-  }
   mostraPiscinasF() {
     this.mostraPiscinas = !this.mostraPiscinas
   }
-  mostraOutrasF() {
-    this.mostraOutras = !this.mostraOutras
+
+  mostraEventosF() {
+    this.mostraEventos = !this.mostraEventos
+  }
+
+  mostraIlhaF() {
+    this.mostraIlha = !this.mostraIlha
+  }
+
+  mostraCentroF() {
+    this.mostraCentro = !this.mostraCentro
   }
 
 }
