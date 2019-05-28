@@ -3,7 +3,11 @@ import {Ocorrencia} from '../shared/banco.model';
 import {Observable} from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FirebaseService} from '../services/firebase.service';
-import {ToastController} from '@ionic/angular';
+import {Platform, ToastController} from '@ionic/angular';
+import {Camera, CameraOptions} from '@ionic-native/camera/ngx';
+import {File} from '@ionic-native/file/ngx';
+import {AngularFireStorage} from '@angular/fire/storage';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-ocorrencias',
@@ -14,25 +18,30 @@ import {ToastController} from '@ionic/angular';
 export class OcorrenciasPage implements OnInit {
   mostraCardLost = false;
   mostraCardSelvagem = false;
+  mostraCardEspecies = false;
   mostraCardCrimes = false;
   mostraCardEstrutura = false;
-  mostraCardEspecies = false;
   addOcorrencia = false;
 
   public ocorrencia: Ocorrencia = {
    tipo: '',
    nomeOcorrencia: '',
    local: '',
-   descricao: ''
+   descricao: '',
    };
 
   public alterarTipo: string;
+
+  public downloadUri: Observable<string>;
+  public blob: Blob;
+  public nomeImagem: string;
 
   public id = null;
   private ocorrencias: Observable<Ocorrencia[]>;
 
   constructor(private activatedRoute: ActivatedRoute, private firebaseService: FirebaseService,
-              private router: Router, private toastCtrl: ToastController) { }
+              private router: Router, private toastCtrl: ToastController, private camera: Camera,
+              private platform: Platform, private file: File, private afStorage: AngularFireStorage) { }
 
 
   ngOnInit() {
@@ -55,49 +64,103 @@ export class OcorrenciasPage implements OnInit {
     }, err => {
       this.showToast('Houve um erro ao enviar a ocorrência :(')
     })
+
+    this.nomeImagem = this.ocorrencia.nomeOcorrencia
+
+    this.uploadImagem(this.blob);
   }
 
   showToast(msg) {
     this.toastCtrl.create({
       message: msg,
-      duration: 2000
+      duration: 1500
     }).then(toast => toast.present());
   }
 
 
 
-
-
   verLost() {
     this.mostraCardLost = !this.mostraCardLost;
-    this.alterarTipo = 'Nova Especie';
+    this.alterarTipo = 'Animal Perdido';
     this.firebaseService.alterarTipo(this.alterarTipo);
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.ocorrencias = this.firebaseService.getOcorrenciasPorTipo();
   }
   verSelvagem() {
     this.mostraCardSelvagem = !this.mostraCardSelvagem;
     this.alterarTipo = 'Animal Selvagem';
     this.firebaseService.alterarTipo(this.alterarTipo);
-  }
-  verCrimes() {
-    this.mostraCardCrimes = !this.mostraCardCrimes;
-    this.alterarTipo = 'Crimes Ambientais';
-    this.firebaseService.alterarTipo(this.alterarTipo);
-  }
-  verEstrutura() {
-    this.mostraCardEstrutura = !this.mostraCardEstrutura;
-    this.alterarTipo = 'Estrutura do Parque';
-    this.firebaseService.alterarTipo(this.alterarTipo);
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.ocorrencias = this.firebaseService.getOcorrenciasPorTipo();
   }
   verEspecies() {
     this.mostraCardEspecies = !this.mostraCardEspecies;
     this.alterarTipo = 'Nova Especie';
     this.firebaseService.alterarTipo(this.alterarTipo);
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.ocorrencias = this.firebaseService.getOcorrenciasPorTipo();
   }
+
+  verCrimes() {
+    this.mostraCardCrimes = !this.mostraCardCrimes;
+    this.alterarTipo = 'Crimes Ambientais';
+    this.firebaseService.alterarTipo(this.alterarTipo);
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.ocorrencias = this.firebaseService.getOcorrenciasPorTipo();
+  }
+  verEstrutura() {
+    this.mostraCardEstrutura = !this.mostraCardEstrutura;
+    this.alterarTipo = 'Estrutura do Parque';
+    this.firebaseService.alterarTipo(this.alterarTipo);
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.ocorrencias = this.firebaseService.getOcorrenciasPorTipo();
+  }
+
   addOcorrencias() {
     this.addOcorrencia = !this.addOcorrencia;
   }
-  abrirCamera() {
-    alert('Deseja enviar foto?');
+
+  /* Camera  */
+  async abrirCamera() {
+    const options: CameraOptions = {
+      quality: 50,
+      destinationType: this.camera.DestinationType.FILE_URI,
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+      correctOrientation: true
+    };
+
+    try {
+      const fileUri: string = await this.camera.getPicture(options);
+
+      let file: string;
+
+      if(this.platform.is('ios')) {
+        file = fileUri.split('/').pop();
+      } else {
+        file = fileUri.substring(fileUri.lastIndexOf('/') +1, fileUri.indexOf('?'));
+      }
+
+      const path: string = fileUri.substring(0, fileUri.lastIndexOf('/'));
+      const buffer: ArrayBuffer = await  this.file.readAsArrayBuffer(path, file);
+      const blob: Blob = new Blob([buffer], { type: 'image/jpeg'});
+
+      this.blob = blob
+
+    }catch (error) {
+      console.log(error)
+    }
+  }
+
+  uploadImagem(blob: Blob){
+    const ref = this.afStorage.ref(this.nomeImagem);
+    const task = ref.put(blob);
+
+    task.snapshotChanges().pipe(
+        finalize(()=> this.downloadUri = ref.getDownloadURL())
+    ).subscribe()
+
+    this.showToast('Sua Imagem foi enviada com sucesso')
+
   }
 
 

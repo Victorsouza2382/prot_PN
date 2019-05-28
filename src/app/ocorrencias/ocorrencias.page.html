@@ -18,7 +18,7 @@
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px" >
           <ion-slide style="width: 100%" *ngFor="let ocorrencia of (ocorrencias | async)">
             <ion-card class="cadaOcorrencia">
-              <img src="../../assets/ocorrencias/animal-carente1.jpg">
+              <img [src]="downloadUri | async" *ngIf="downloadUri | async">
               <ion-card-title> {{ ocorrencia.nomeOcorrencia }} </ion-card-title>
               <ion-card-subtitle padding-top="5px">
                 <span>Local: </span> {{ ocorrencia.local }}
@@ -33,20 +33,21 @@
     </ion-card>
   </div>
 
+ <!-- CARD ANIMAIS SELVAGENS-->
   <div id="animaisSelv" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
       <div class="divClick"  (click)="verSelvagem()"><h1 >Animais Selvagens</h1></div>
       <div *ngIf="mostraCardSelvagem" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
-          <ion-slide style="width: 100%">
+          <ion-slide style="width: 100%" *ngFor="let ocorrencia of (ocorrencias | async)">
             <ion-card class="cadaOcorrencia">
               <img src="../../assets/ocorrencias/lobo-guara.jpg">
-              <ion-card-title> Lobo Guará </ion-card-title>
+              <ion-card-title> {{ ocorrencia.nomeOcorrencia }} </ion-card-title>
               <ion-card-subtitle padding-top="5px">
-                <span>Local: </span>Perto do Lago
+                <span>Local: </span>{{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6>Foi visto um lobo</h6>
+                <h6>{{ ocorrencia.descricao }}</h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -55,20 +56,21 @@
     </ion-card>
   </div>
 
+<!--  CARD NOVAS ESPECIES-->
   <div id="novasEspecies" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
       <div class="divClick"  (click)="verEspecies()"><h1 > Novas Espécies </h1></div>
       <div *ngIf="mostraCardEspecies" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
-          <ion-slide style="width: 100%">
+          <ion-slide style="width: 100%" *ngFor="let ocorrencia of (ocorrencias | async)">
             <ion-card class="cadaOcorrencia">
               <img src="../../assets/ocorrencias/novaespecie-passarinho.jpg">
-              <ion-card-title> Passarinho Desconhecido </ion-card-title>
+              <ion-card-title> {{ ocorrencia.nomeOcorrencia }} </ion-card-title>
               <ion-card-subtitle padding-top="5px">
-                <span>Local: </span>Margem do lago
+                <span>Local: </span> {{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6>Espécie de pássaro desconhecida</h6>
+                <h6>{{ ocorrencia.descricao }}</h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -77,20 +79,21 @@
     </ion-card>
   </div>
 
+<!--  CARD CRIMES AMBIENTAIS-->
   <div id="crimes" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
       <div class="divClick"  (click)="verCrimes()"><h1> Crimes Ambientais </h1></div>
       <div *ngIf="mostraCardCrimes" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
-          <ion-slide style="width: 100%">
+          <ion-slide style="width: 100%" *ngFor="let ocorrencia of (ocorrencias | async)">
             <ion-card class="cadaOcorrencia">
               <img src="../../assets/ocorrencias/crime1.jpg">
-              <ion-card-title> Pessoa Cortando Árvore </ion-card-title>
+              <ion-card-title> {{ ocorrencia.nomeOcorrencia }} </ion-card-title>
               <ion-card-subtitle padding-top="5px">
-                <span>Local: </span>Beira Lago
+                <span>Local: </span> {{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6>Flagrado pessoas cortando árvores</h6>
+                <h6> {{ ocorrencia.descricao }} </h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -99,20 +102,21 @@
     </ion-card>
   </div>
 
+ <!--CARD ESTRUTURA PARQUE-->
   <div id="estrutura" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
       <div class="divClick"  (click)="verEstrutura()"><h1 > Estrutura do Parque </h1></div>
       <div *ngIf="mostraCardEstrutura" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
-          <ion-slide style="width: 100%">
+          <ion-slide style="width: 100%" *ngFor="let ocorrencia of (ocorrencias | async)">
             <ion-card class="cadaOcorrencia">
               <img src="../../assets/ocorrencias/estrutura-bebedouro.jpg">
-              <ion-card-title> Bebedouro estragado </ion-card-title>
+              <ion-card-title> {{ ocorrencia.nomeOcorrencia }} </ion-card-title>
               <ion-card-subtitle padding-top="5px">
-                <span>Local: </span>Próximo ao parque Intantil
+                <span>Local: </span> {{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6>Torneira não sai água</h6>
+                <h6> {{ ocorrencia.descricao }} </h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>

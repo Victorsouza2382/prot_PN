@@ -9,13 +9,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FirebaseService {
-  public tipo = 'Animal Perdido';
+  public tipo = '';
   private ocorrencias: Observable<Ocorrencia[]>;
   private ocorrenciaCollection: AngularFirestoreCollection<Ocorrencia>;
 
 
   constructor(private afs: AngularFirestore) {
-    this. ocorrenciaCollection = this.afs.collection<Ocorrencia>('ocorrencias', ref => ref.where('tipo', '==', `${this.tipo}`));
+    this. ocorrenciaCollection = this.afs.collection<Ocorrencia>('ocorrencias', ref => ref.orderBy('nomeOcorrencia'));
     this.ocorrencias = this.ocorrenciaCollection.snapshotChanges().pipe(
         map(actions => {
           return actions.map(a => {
@@ -26,12 +26,29 @@ export class FirebaseService {
         }));
   }
 
-  alterarTipo(tipo): void {
-      this.tipo = tipo;
-      console.log(this.tipo)
+    alterarTipo(tipo): void {
+        this.tipo = tipo;
+        console.log(this.tipo)
 
-  //    Consigo trazer o valor até aqui! Agora falta eu conseguir passar ele para o this.tipo!
-  }
+        //    Consigo trazer o valor até aqui! Agora falta eu conseguir passar ele para o this.tipo!
+    }
+
+    getOcorrenciasPorTipo(): Observable<Ocorrencia[]>{
+      console.log('Inicio da Função: ', this.tipo)
+        this. ocorrenciaCollection = this.afs.collection<Ocorrencia>('ocorrencias', ref => ref.where('tipo', '==', `${this.tipo}`));
+        this.ocorrencias = this.ocorrenciaCollection.snapshotChanges().pipe(
+            map(actions => {
+                return actions.map(a => {
+                    const data = a.payload.doc.data();
+                    const id = a.payload.doc.id;
+                    return {id, ...data}
+                })
+            }));
+
+        return this.ocorrencias;
+    }
+
+
 
 
     getOcorrencias(): Observable<Ocorrencia[]>{

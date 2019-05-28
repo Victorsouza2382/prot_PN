@@ -1,10 +1,14 @@
 # Projeto Parque Nacional
 
+### O projeto
+#### Projeto desenvolvido voluntariamente para servir de aplicativo para o Parque Nacional
 
+## Tecnologias
+### Angular/ Ionic 4/ Firebase Database e Storage
 
-# Dependências necessárias
+# Para rodas a aplicação - Dependências necessárias
 
-###  Ter o IONIC
+### Ter o Node
 ###  Ter o NPM
 ```
 $ npm install -g ionic cordova
