@@ -11,57 +11,82 @@
 
   <div class="validacao" >
 
-    <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
+    <ion-card class="atracoes" >
+      <div class="divClick" (click)="abrirValidacao()"> <h1>VALIDAR</h1> </div>
+      <div *ngIf="validacao" style="width: 100%">
+        <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
 
-      <ion-slide style="width: 100%">
+          <ion-slide style="width: 100%">
+            <ion-card class="cadaAtracao">
+              <h1>Animal Perdido </h1>
+              <div>
+                <img src="../../assets/validacao/caoPerdido.jpg" >
+                <ion-card-title> Cachorro Perdido </ion-card-title>
+                <ion-card-subtitle padding-top="5px">
+                  <span>Local: </span>Perto do Parquinho
+                </ion-card-subtitle>
+                <ion-card-content>
+                  <h6>Encontrado vagando</h6>
+                </ion-card-content>
+              </div>
+              <div class="botaoValidar">
+                <ion-button shape="round" fill="solid">Validar</ion-button>
+                <ion-button shape="round" fill="outline">Apagar</ion-button>
 
-        <ion-card class="atracoes" >
-          <h1>Validar - Animal Perdido </h1>
-          <div>
-            <img src="../../assets/validacao/caoPerdido.jpg" >
-            <ion-card-title> Cachorro Perdido </ion-card-title>
-            <ion-card-subtitle padding-top="5px">
-              <span>Local: </span>Perto do Parquinho
-            </ion-card-subtitle>
-            <ion-card-content>
-              <h6>Encontrado vagando</h6>
-            </ion-card-content>
-          </div>
-          <div class="botaoValidar">
-            <ion-button shape="round" fill="solid">Validar</ion-button>
-            <ion-button shape="round" fill="outline">Apagar</ion-button>
+              </div>
+            </ion-card>
+          </ion-slide>
 
-          </div>
-        </ion-card>
+          <ion-slide style="width: 100%">
+            <ion-card class="cadaAtracao">
+              <h1>Estrutura </h1>
+              <div>
+                <img src="../../assets/validacao/bebedouro.jpg" >
+                <ion-card-title> Bebedouro estragado </ion-card-title>
+                <ion-card-subtitle padding-top="5px">
+                  <span>Local: </span>Próximo ao parque Intantil
+                </ion-card-subtitle>
+                <ion-card-content>
+                  <h6>Bebedouro todo quebrado</h6>
+                </ion-card-content>
+              </div>
+              <div class="botaoValidar">
+                <ion-button shape="round" fill="solid">Validar</ion-button>
+                <ion-button shape="round" fill="outline">Apagar</ion-button>
+              </div>
+            </ion-card>
+          </ion-slide>
 
-      </ion-slide>
-
-      <ion-slide style="width: 100%">
-
-        <ion-card class="atracoes">
-          <h1>Validar - Estrutura </h1>
-          <div>
-          <img src="../../assets/validacao/bebedouro.jpg" >
-          <ion-card-title> Bebedouro estragado </ion-card-title>
-          <ion-card-subtitle padding-top="5px">
-            <span>Local: </span>Próximo ao parque Intantil
-          </ion-card-subtitle>
-          <ion-card-content>
-            <h6>Bebedouro todo quebrado</h6>
-          </ion-card-content>
-          </div>
-          <div class="botaoValidar">
-            <ion-button shape="round" fill="solid">Validar</ion-button>
-            <ion-button shape="round" fill="outline">Apagar</ion-button>
-
-          </div>
-        </ion-card>
-
-      </ion-slide>
-
-    </ion-slides>
+        </ion-slides>
+      </div>
+    </ion-card>
 
   </div>
+
+  <div class="validacao"  >
+    <ion-card class="atracoes" >
+      <div class="divClick" (click)="abrirFormularioEventos()">  <h1>Enviar Eventos</h1> </div>
+
+      <ion-list id="listaAdiciona" *ngIf="verFormEventos">
+        <ion-item>
+          <ion-input placeholder="Título" [(ngModel)]="evento.titulo" clearInput required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Descrição" [(ngModel)]="evento.descricao" clearInput required>
+          </ion-input >
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Data" [(ngModel)]="evento.data" clearInput required>
+          </ion-input>
+        </ion-item>
+        <div class="botaoValidar">
+          <ion-button shape="round" fill="outline" (click)="adicionarEvento()">Enviar</ion-button>
+        </div>
+      </ion-list>
+    </ion-card>
+  </div>
+
 
 
 </ion-content>
