@@ -10,9 +10,13 @@ div#toolbar {
 div#toolbar ion-icon {
   font-size: x-large;
   font-weight: bold;
-  color: gold;
+  color: #cccc33;
   justify-self: end;
   margin-right: 10px;
+}
+
+ion-title.titleToolbar{
+  font-size: small;
 }
 
 
@@ -28,7 +32,7 @@ ion-icon{
 ion-card{
   width: 100%;
   background: rgba(0, 0, 0, 0.1);
-  border: goldenrod solid 2px;
+  border: #cccc33 solid 2px;
   padding: 5px;
   margin: 10px 25px 0 25px;
 
@@ -40,7 +44,7 @@ ion-card div{
 
 ion-card-title {
   margin: 2px;
-  color: goldenrod;
+  color: #cccc33;
   font-size: medium;
   justify-self: center;
 }
@@ -50,6 +54,7 @@ ion-img{
   height: 21px;
   margin-right: 10px;
   justify-self: center;
+  color: #cccc33;
 }
 
 

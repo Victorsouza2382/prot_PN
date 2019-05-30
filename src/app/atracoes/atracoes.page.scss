@@ -19,19 +19,19 @@ ion-slide {
 ion-button{
   margin-top: 5px;
   margin-bottom: 10px;
-  color: goldenrod;
+  color: #063;
 }
 
 ion-card.atracoes{
   background: rgba(0, 0, 0, .1);
-  color: goldenrod;
+  color: #cccc33;
   font-weight: bold;
   font-variant: small-caps;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: goldenrod solid 1px;
+  border: #cccc33 solid 1px;
   box-shadow: 2px 2px #2f2f2f;
 }
 
@@ -52,7 +52,7 @@ ion-card-subtitle{
   padding: 0;
   font-size: medium;
   font-weight: bold;
-  color: #9d3600;
+  color: #669933;
 }
 
 h6 {
@@ -64,7 +64,11 @@ span {
 }
 ion-card-content {
   font-size: small;
-  color: black;
+  color: #396;
+}
+p {
+  font-size: small;
+  color: #396;
 }
 img {
   padding: 4px;

@@ -5,13 +5,13 @@ ion-card{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: goldenrod solid 1px;
+  border: #cccc33 solid 1px;
 }
 
 ion-button{
   margin-top: 10px;
   margin-bottom: 10px;
-  color: goldenrod;
+  color: #063;
 }
 
 ion-button#logar{
@@ -20,7 +20,7 @@ ion-button#logar{
 }
 
 h4{
-  color: goldenrod;
+  color: #cccc33;
   font-weight: bold;
   font-variant: small-caps;
   font-size: large;

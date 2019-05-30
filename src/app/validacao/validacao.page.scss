@@ -9,6 +9,11 @@ div.botaoValidar{
   flex-direction: column;
   align-items: center;
   justify-self: center;
+  color: #006633 ;
+}
+
+div.botaoValidar ion-button{
+  color: #006633;
 }
 
 div.divClick{
@@ -31,21 +36,21 @@ ion-button{
 
 ion-icon {
   font-size: medium;
-  color: goldenrod ;
+  color: #006633 ;
   justify-self: center;
   margin-left: 20px;
 }
 
 ion-card.atracoes{
   background: rgba(0, 0, 0, .1);
-  color: goldenrod;
+  color: #cccc33;
   font-weight: bold;
   font-variant: small-caps;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: goldenrod solid 1px;
+  border: #cccc33 solid 1px;
 }
 
 ion-card h1 {
@@ -63,30 +68,33 @@ ion-card-title{
   font-size: medium;
   font-weight: bold;
   margin-top: 10px;
-  color: #9d3600;
+  color: #693;
 }
 
 ion-card-subtitle{
   font-weight: normal;
   font-size: small;
   text-decoration: underline;
-  color: #737373;
+  color: #693;
 }
 
 h6 {
   padding: 0;
   margin: 1px;
-  color: #737373;
+  color: #396;
 }
 span {
   font-weight: bold;
 }
 ion-card-content {
   font-size: small;
-  color: black;
+  color: #396;
 }
 ion-card img {
   padding: 4px;
 }
 
+ion-card h1{
+  color: #cccc33;
+}
 

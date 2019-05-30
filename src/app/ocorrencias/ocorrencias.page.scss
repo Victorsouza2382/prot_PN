@@ -4,14 +4,14 @@ ion-card#iconeAdd{
   padding-left: 2px;
   padding-right: 2px;
   background: rgba(255, 0, 0, .05);
-  color: rgba(0, 0, 0, .7);
+  color: #cccc33;
   font-weight: bold;
   font-variant: small-caps;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: goldenrod solid 1px;
+  border: #cccc33 solid 1px;
   margin: 10px 25px 0 25px;
 }
 
@@ -74,6 +74,12 @@ ion-list#listaAdiciona {
   padding-bottom: 0;
 
 }
+
+div#botaoEnviar ion-button{
+  color: #063;
+
+}
+
 /*  ====================  */
 
 /*CARDS DAS OCORRENCIAS*/
@@ -106,7 +112,7 @@ div.divClick{
 
 ion-card.ocorrencias{
   background: rgba(0, 0, 0, .1);
-  color: goldenrod;
+  color: #cccc33;
   font-weight: bold;
   font-variant: small-caps;
   font-size: medium;
@@ -114,7 +120,7 @@ ion-card.ocorrencias{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: goldenrod solid 1px;
+  border: #cccc33 solid 1px;
   box-shadow: 2px 2px #2f2f2f;
 }
 ion-card h1 {
@@ -132,14 +138,14 @@ div#SubTitle{
 ion-card-title{
   font-weight: bold;
   margin-top: 10px;
-  color: #9d3600;
+  color: #669933;
 }
 
 ion-card-subtitle{
   font-weight: normal;
   font-size: medium;
   text-decoration: underline;
-  color: black;
+  color: #339966;
 }
 h5{
   padding: 0;
@@ -156,7 +162,7 @@ span {
 }
 ion-card-content {
   font-size: small;
-  color: black;
+  color: #339966;
 }
 ion-card img {
   padding: 4px;

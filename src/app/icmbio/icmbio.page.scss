@@ -1,20 +1,20 @@
 ion-card {
   padding: 5px 5px 20px 5px;
   background: rgba(0, 0, 0, .1);
-  color: goldenrod;
+  color: #cccc33;
   font-variant: small-caps;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: goldenrod solid 1px;
+  border: #cccc33 solid 1px;
 }
 
 
 ion-button{
   margin-top: 5px;
   margin-bottom: 10px;
-  color: goldenrod;
+  color: #063;
 
 
 
@@ -22,7 +22,7 @@ ion-button{
 }
 
 ion-card-title{
-  color: black;
+  color: #396;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@ ion-card-subtitle p{
   margin-top: 10px;
   font-weight: bolder;
   font-size: large;
-  color: black;
+  color: #396;
 }
 div#iframe{
   width: 100%;
@@ -57,5 +57,15 @@ iframe#video{
 ion-card-content p{
   font-size: 13pt;
   margin-bottom: 5px;
+
+}
+
+
+
+div.footer{
+  padding-right: 3px;
+  padding-left: 10px;
+}
+div.footer img{
 
 }
