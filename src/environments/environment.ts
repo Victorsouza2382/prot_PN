@@ -6,7 +6,7 @@ export const environment = {
   production: false,
 
   firebaseConfig : {
-    apiKey: "AIzaSyCeK5Q76aubhUDgaVD1G4q37JODj0F_kjA",
+    apiKey: "",
     authDomain: "parquenacional-63888.firebaseapp.com",
     databaseURL: "https://parquenacional-63888.firebaseio.com",
     projectId: "parquenacional-63888",
