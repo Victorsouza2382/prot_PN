@@ -9,7 +9,7 @@
 
 <ion-content fullscreen style="--background: rgb(51, 51, 51);">
 
-  <ion-card>
+  <ion-card style="color: #063">
 
     <div class="botoesEmergencia">
       <ion-buttons>
@@ -35,7 +35,7 @@
       </ion-buttons>
     </div>
     <div id="cardAddOc" style="margin-top: 0" *ngIf="addOcorrencia">
-      <ion-card id="addOcorrencia" style="border: goldenrod solid 1px;">
+      <ion-card id="addOcorrencia" style="border: #cccc33 solid 1px;">
 
         <ion-icon id="cameraOcorrencia2" name="md-camera" justify-content-end (click)="abrirCamera()"></ion-icon>
 
@@ -72,10 +72,6 @@
           <ion-item>
             <ion-input placeholder="Local">
             </ion-input><ion-icon id="enviarLoc2" name="md-locate" justify-content-end></ion-icon>
-          </ion-item>
-          <ion-item id="desc">
-            <ion-input placeholder="Descrição">
-            </ion-input>
           </ion-item>
           <div id="botaoEnviar">
             <ion-button id="ocorrencia" shape="round" fill="outline">Enviar</ion-button>

@@ -27,7 +27,7 @@ export class OcorrenciasPage implements OnInit {
    tipo: '',
    nomeOcorrencia: '',
    local: '',
-   descricao: '',
+   data: null,
    };
 
   public alterarTipo: string;
@@ -58,6 +58,7 @@ export class OcorrenciasPage implements OnInit {
   }
 
   adicionarOcorrencia(){
+    this.ocorrencia.data = Date.now()
     this.firebaseService.addOcorrenia(this.ocorrencia).then(() =>{
       this.router.navigateByUrl('/ocorrencias');
       this.showToast('Sua ocorrência foi enviada com sucesso para análise!')
@@ -88,14 +89,14 @@ export class OcorrenciasPage implements OnInit {
   }
   verSelvagem() {
     this.mostraCardSelvagem = !this.mostraCardSelvagem;
-    this.alterarTipo = 'Animal Selvagem';
+    this.alterarTipo = 'Fauna Silvestre';
     this.firebaseService.alterarTipo(this.alterarTipo);
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.ocorrencias = this.firebaseService.getOcorrenciasPorTipo();
   }
   verEspecies() {
     this.mostraCardEspecies = !this.mostraCardEspecies;
-    this.alterarTipo = 'Nova Especie';
+    this.alterarTipo = 'Flora Silvestre';
     this.firebaseService.alterarTipo(this.alterarTipo);
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.ocorrencias = this.firebaseService.getOcorrenciasPorTipo();

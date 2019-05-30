@@ -13,7 +13,7 @@
 <!--  CARD ANIMAIS PERDIDOS-->
   <div id="lostAnimals" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <div class="divClick" (click)="verLost()"><h1 >Animais Perdidos</h1></div>
+      <div class="divClick" (click)="verLost()"><h1 >Domésticos Perdidos</h1></div>
       <div *ngIf="mostraCardLost" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px" >
           <ion-slide style="width: 100%" *ngFor="let ocorrencia of (ocorrencias | async)">
@@ -24,7 +24,7 @@
                 <span>Local: </span> {{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6>Descrição: {{ ocorrencia.descricao }}</h6>
+                <h6>Data: {{ ocorrencia.data }}</h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -36,7 +36,7 @@
  <!-- CARD ANIMAIS SELVAGENS-->
   <div id="animaisSelv" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <div class="divClick"  (click)="verSelvagem()"><h1 >Animais Selvagens</h1></div>
+      <div class="divClick"  (click)="verSelvagem()"><h1 >Fauna Silvestre</h1></div>
       <div *ngIf="mostraCardSelvagem" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
           <ion-slide style="width: 100%" *ngFor="let ocorrencia of (ocorrencias | async)">
@@ -47,7 +47,7 @@
                 <span>Local: </span>{{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6>{{ ocorrencia.descricao }}</h6>
+                <h6>Data: {{ ocorrencia.data | date: 'dd/MM/yy'}}</h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -59,7 +59,7 @@
 <!--  CARD NOVAS ESPECIES-->
   <div id="novasEspecies" class="ocorrencias animated rollIn" >
     <ion-card class="ocorrencias" >
-      <div class="divClick"  (click)="verEspecies()"><h1 > Novas Espécies </h1></div>
+      <div class="divClick"  (click)="verEspecies()"><h1 > Flora Silvestre </h1></div>
       <div *ngIf="mostraCardEspecies" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 10px">
           <ion-slide style="width: 100%" *ngFor="let ocorrencia of (ocorrencias | async)">
@@ -70,7 +70,7 @@
                 <span>Local: </span> {{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6>{{ ocorrencia.descricao }}</h6>
+                <h6>Data: {{ ocorrencia.data }}</h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -93,7 +93,7 @@
                 <span>Local: </span> {{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6> {{ ocorrencia.descricao }} </h6>
+                <h6>Data: {{ ocorrencia.data }} </h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -116,7 +116,7 @@
                 <span>Local: </span> {{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6> {{ ocorrencia.descricao }} </h6>
+                <h6>Data: {{ ocorrencia.data }} </h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -153,13 +153,13 @@
             <ion-label id="labelSelect">Tipo</ion-label>
             <ion-select placeholder="Selecione" [(ngModel)]="ocorrencia.tipo" required>
               <ion-select-option value="Animal Perdido">
-                Animais Perdidos
+                Animais Domésticos Perdidos
               </ion-select-option>
-              <ion-select-option value="Animal Selvagem">
-                Animais Selvagens
+              <ion-select-option value="Fauna Silvestre">
+                Fauna Silvestre
               </ion-select-option>
-              <ion-select-option value="Nova Especie">
-                Novas Espécies
+              <ion-select-option value="Flora Silvestre">
+                Flora Silvestre
               </ion-select-option>
               <ion-select-option value="Crimes Ambientais">
                 Crimes Ambientais
@@ -178,10 +178,6 @@
         <ion-item>
           <ion-input placeholder="Local" [(ngModel)]="ocorrencia.local" clearInput required>
           </ion-input ><ion-icon id="enviarLoc" name="md-locate" justify-content-end ></ion-icon>
-        </ion-item>
-        <ion-item id="desc">
-          <ion-input placeholder="Descrição" [(ngModel)]="ocorrencia.descricao" clearInput required>
-          </ion-input>
         </ion-item>
         <div id="botaoEnviar">
           <ion-button shape="round" fill="outline" (click)="adicionarOcorrencia()">Enviar</ion-button>

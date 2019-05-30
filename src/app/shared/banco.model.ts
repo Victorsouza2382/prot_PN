@@ -5,7 +5,7 @@ export class Ocorrencia {
         public tipo: string,
         public nomeOcorrencia: string,
         public local: string,
-        public descricao: string,
+        public data: number,
         public enderecoImagem?: Observable<string>,
         public id?: string) {}
 }
