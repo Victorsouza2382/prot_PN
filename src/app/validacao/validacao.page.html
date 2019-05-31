@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar style="--background: black; color: #396">
-    <ion-title>Validação</ion-title>
+    <ion-title>Administração</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -67,7 +67,7 @@
     <ion-card class="atracoes" >
       <div class="divClick" (click)="abrirFormularioEventos()">  <h1>Enviar Eventos</h1> </div>
 
-      <ion-list id="listaAdiciona" *ngIf="verFormEventos">
+      <ion-list class="listaAdiciona" *ngIf="verFormEventos">
         <ion-item>
           <ion-input placeholder="Título" [(ngModel)]="evento.titulo" clearInput required>
           </ion-input>
@@ -77,11 +77,39 @@
           </ion-input >
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Data" [(ngModel)]="evento.data" clearInput required>
-          </ion-input>
+          <ion-datetime placeholder="Data Início" [(ngModel)]="evento.dataI"  required>
+          </ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-datetime placeholder="Data Fim" [(ngModel)]="evento.dataF" required>
+          </ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Inserir Imagem</ion-label>
+          <ion-icon name="cloud-upload" size="medium" (click)="imagemEvento()"></ion-icon>
         </ion-item>
         <div class="botaoValidar">
           <ion-button shape="round" fill="outline" (click)="adicionarEvento()">Enviar</ion-button>
+        </div>
+      </ion-list>
+    </ion-card>
+  </div>
+
+  <div class="validacao"  >
+    <ion-card class="atracoes" >
+      <div class="divClick" (click)="abrirFormularioAvisos()">  <h1>Enviar Avisos</h1> </div>
+
+      <ion-list class="listaAdiciona" *ngIf="verFormAvisos">
+        <ion-item>
+          <ion-input placeholder="Título" [(ngModel)]="aviso.titulo" clearInput required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Conteúdo" [(ngModel)]="aviso.conteudo" clearInput required>
+          </ion-input >
+        </ion-item>
+        <div class="botaoValidar">
+          <ion-button shape="round" fill="outline" (click)="adicionarAviso()">Enviar</ion-button>
         </div>
       </ion-list>
     </ion-card>

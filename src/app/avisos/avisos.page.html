@@ -10,42 +10,12 @@
 <ion-content fullscreen style="--background: rgb(51, 51, 51);">
 
 
-  <div id="aviso4" class="avisos animated fadeInDown " >
+  <div id="aviso1" class="avisos animated fadeInDown " *ngFor="let aviso of (avisos | async)">
     <ion-card class="cardAviso" >
-      <h1>Título_Aviso4;</h1>
+      <h1>{{ aviso.titulo }}</h1>
       <ion-card-content>
-        <p>Conteudo_aviso;</p>
-        <p>Data do aviso: (sistema);</p>
-      </ion-card-content>
-    </ion-card>
-  </div>
-
-  <div id="aviso3" class="avisos animated fadeInDown " >
-    <ion-card class="cardAviso" >
-      <h1>Título_Aviso3;</h1>
-      <ion-card-content>
-        <p>Conteudo_aviso;</p>
-        <p>Data do aviso: (sistema);</p>
-      </ion-card-content>
-    </ion-card>
-  </div>
-
-  <div id="aviso2" class="avisos animated fadeInDown " >
-    <ion-card class="cardAviso" >
-      <h1>Título_Aviso2;</h1>
-      <ion-card-content>
-        <p>Conteudo_aviso;</p>
-        <p>Data do aviso: (sistema);</p>
-      </ion-card-content>
-    </ion-card>
-  </div>
-
-  <div id="aviso1" class="avisos animated fadeInDown " >
-    <ion-card class="cardAviso" >
-      <h1>Título_Aviso1;</h1>
-      <ion-card-content>
-        <p>Conteudo_aviso;</p>
-        <p>Data do aviso: (sistema);</p>
+        <p>{{ aviso.conteudo }}</p>
+        <p>Data do aviso: {{ aviso.data |  date: 'dd/MM/yy'}}</p>
       </ion-card-content>
     </ion-card>
   </div>

@@ -16,42 +16,21 @@
       <div *ngIf="mostraEventos" style="width: 100%">
         <ion-slides pager="true" style="width: 100%; padding-bottom: 5px">
 
-          <ion-slide style="width: 100%">
-            <ion-card class="cadaAtracao">
-              <img src="../../assets/eventoEX.jpg">
-              <ion-card-subtitle padding-top="5px">
-                Evento Tal
-              </ion-card-subtitle>
-
-              <div class="infoatracoes">
-                <p>
-                  Descrção do Evento
-                </p>
-              </div>
-              <div class="dataEvento">
-                <p>
-                  Data e inicio e fim.
-                </p>
-              </div>
-            </ion-card>
-          </ion-slide>
-
-          <ion-slide style="width: 100%">
+          <ion-slide style="width: 100%" *ngFor="let evento of (eventos | async)">
             <ion-card class="cadaAtracao">
               <img src="../../assets/eventoEX2.jpg">
               <ion-card-subtitle padding-top="5px">
-                Comemoração Semana Meio Ambiente
+                {{evento.titulo}}
               </ion-card-subtitle>
 
               <div class="infoatracoes">
                 <p>
-                  Todas as piscinas liberadas.
+                  {{evento.descricao}}
                 </p>
               </div>
               <div class="dataEvento">
-                <p>
-                  Começa 01/06/2019 e Termina 09/06/2019
-                </p>
+                <p>Data Início: {{ evento.dataI | date: 'dd/MM/yy' }}</p>
+                <p>Data Fim: {{ evento.dataF | date: 'dd/MM/yy' }}</p>
               </div>
             </ion-card>
           </ion-slide>

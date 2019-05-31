@@ -2,7 +2,8 @@ class Evento {
     constructor(
         public titulo: string,
         public descricao: string,
-        public data: string,
+        public dataI: number,
+        public dataF: number,
         public id?: string) {}
 
 }

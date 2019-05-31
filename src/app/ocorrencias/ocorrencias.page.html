@@ -24,7 +24,7 @@
                 <span>Local: </span> {{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6>Data: {{ ocorrencia.data }}</h6>
+                <h6>Data: {{ ocorrencia.data | date: 'dd/MM/yy'}}</h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -70,7 +70,7 @@
                 <span>Local: </span> {{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6>Data: {{ ocorrencia.data }}</h6>
+                <h6>Data: {{ ocorrencia.data | date: 'dd/MM/yy'}}</h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -93,7 +93,7 @@
                 <span>Local: </span> {{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6>Data: {{ ocorrencia.data }} </h6>
+                <h6>Data: {{ ocorrencia.data | date: 'dd/MM/yy'}} </h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -116,7 +116,7 @@
                 <span>Local: </span> {{ ocorrencia.local }}
               </ion-card-subtitle>
               <ion-card-content>
-                <h6>Data: {{ ocorrencia.data }} </h6>
+                <h6>Data: {{ ocorrencia.data | date: 'dd/MM/yy'}} </h6>
               </ion-card-content>
             </ion-card>
           </ion-slide>

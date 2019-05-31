@@ -13,7 +13,7 @@ export class EventosService {
   private eventoCollection: AngularFirestoreCollection<Evento>
 
   constructor( private afs: AngularFirestore) {
-    this. eventoCollection = this.afs.collection<Evento>('eventos', ref => ref.orderBy('data'));
+    this. eventoCollection = this.afs.collection<Evento>('eventos', ref => ref.orderBy('dataI'));
     this.eventos = this.eventoCollection.snapshotChanges().pipe(
         map(actions => {
           return actions.map(a => {
