@@ -46,6 +46,7 @@ ion-card-title {
   margin: 2px;
   color: #cccc33;
   font-size: medium;
+  font-family: "DIN Alternate", sans-serif;
   justify-self: center;
 }
 
@@ -55,6 +56,18 @@ ion-img{
   margin-right: 10px;
   justify-self: center;
   color: #cccc33;
+}
+
+ion-footer div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: center;
+
+}
+
+ion-footer div ion-icon{
+  margin-left: 2px;
 }
 
 

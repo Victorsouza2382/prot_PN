@@ -6,6 +6,6 @@ export class Ocorrencia {
         public nomeOcorrencia: string,
         public local: string,
         public data: number,
-        public enderecoImagem?: Observable<string>,
+        public url: string,
         public id?: string) {}
 }

@@ -3,6 +3,7 @@ import { Ocorrencia} from '../shared/banco.model';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, DocumentReference } from '@angular/fire/firestore';
 import { map, take } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import {AngularFireStorage} from '@angular/fire/storage';
 
 
 @Injectable({
@@ -14,7 +15,8 @@ export class FirebaseService {
   private ocorrenciaCollection: AngularFirestoreCollection<Ocorrencia>;
 
 
-  constructor(private afs: AngularFirestore) {
+  constructor(private afs: AngularFirestore, private afStorage: AngularFireStorage) {
+
     this. ocorrenciaCollection = this.afs.collection<Ocorrencia>('ocorrencias', ref => ref.orderBy('nomeOcorrencia'));
     this.ocorrencias = this.ocorrenciaCollection.snapshotChanges().pipe(
         map(actions => {

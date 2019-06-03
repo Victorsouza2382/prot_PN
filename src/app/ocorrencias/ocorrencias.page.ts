@@ -28,16 +28,19 @@ export class OcorrenciasPage implements OnInit {
    nomeOcorrencia: '',
    local: '',
    data: null,
-   };
+    url: ''
+  };
 
   public alterarTipo: string;
-
   public downloadUri: Observable<string>;
+  public urlTransition: string;
   public blob: Blob;
   public nomeImagem: string;
 
   public id = null;
   private ocorrencias: Observable<Ocorrencia[]>;
+
+  public formularioPreenchido: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute, private firebaseService: FirebaseService,
               private router: Router, private toastCtrl: ToastController, private camera: Camera,
@@ -57,19 +60,7 @@ export class OcorrenciasPage implements OnInit {
     }
   }
 
-  adicionarOcorrencia(){
-    this.ocorrencia.data = Date.now()
-    this.firebaseService.addOcorrenia(this.ocorrencia).then(() =>{
-      this.router.navigateByUrl('/ocorrencias');
-      this.showToast('Sua ocorrência foi enviada com sucesso para análise!')
-    }, err => {
-      this.showToast('Houve um erro ao enviar a ocorrência :(')
-    })
 
-    this.nomeImagem = this.ocorrencia.nomeOcorrencia
-
-    this.uploadImagem(this.blob);
-  }
 
   showToast(msg) {
     this.toastCtrl.create({
@@ -77,8 +68,6 @@ export class OcorrenciasPage implements OnInit {
       duration: 1500
     }).then(toast => toast.present());
   }
-
-
 
   verLost() {
     this.mostraCardLost = !this.mostraCardLost;
@@ -101,7 +90,6 @@ export class OcorrenciasPage implements OnInit {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.ocorrencias = this.firebaseService.getOcorrenciasPorTipo();
   }
-
   verCrimes() {
     this.mostraCardCrimes = !this.mostraCardCrimes;
     this.alterarTipo = 'Crimes Ambientais';
@@ -116,39 +104,50 @@ export class OcorrenciasPage implements OnInit {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.ocorrencias = this.firebaseService.getOcorrenciasPorTipo();
   }
-
   addOcorrencias() {
     this.addOcorrencia = !this.addOcorrencia;
   }
 
   /* Camera  */
   async abrirCamera() {
-    const options: CameraOptions = {
-      quality: 50,
-      destinationType: this.camera.DestinationType.FILE_URI,
-      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
-      correctOrientation: true
-    };
 
-    try {
-      const fileUri: string = await this.camera.getPicture(options);
+    if(this.nomeImagem == undefined){
+      this.nomeImagem = this.ocorrencia.nomeOcorrencia;
+      if(this.nomeImagem == undefined){
+      this.showToast('Preencha os campos abaixo primeiro') }
+    } else {
 
-      let file: string;
+      const options: CameraOptions = {
+        quality: 50,
+        destinationType: this.camera.DestinationType.FILE_URI,
+        sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+        correctOrientation: true
+      };
 
-      if(this.platform.is('ios')) {
-        file = fileUri.split('/').pop();
-      } else {
-        file = fileUri.substring(fileUri.lastIndexOf('/') +1, fileUri.indexOf('?'));
+      try {
+        const fileUri: string = await this.camera.getPicture(options);
+
+        let file: string;
+
+        if(this.platform.is('ios')) {
+          file = fileUri.split('/').pop();
+        } else {
+          file = fileUri.substring(fileUri.lastIndexOf('/') +1, fileUri.indexOf('?'));
+        }
+
+        const path: string = fileUri.substring(0, fileUri.lastIndexOf('/'));
+        const buffer: ArrayBuffer = await  this.file.readAsArrayBuffer(path, file);
+        const blob: Blob = new Blob([buffer], { type: 'image/jpeg'});
+
+        this.blob = blob
+
+      }catch (error) {
+        console.log(error)
       }
 
-      const path: string = fileUri.substring(0, fileUri.lastIndexOf('/'));
-      const buffer: ArrayBuffer = await  this.file.readAsArrayBuffer(path, file);
-      const blob: Blob = new Blob([buffer], { type: 'image/jpeg'});
+      this.nomeImagem = this.ocorrencia.nomeOcorrencia;
+      this.uploadImagem(this.blob);
 
-      this.blob = blob
-
-    }catch (error) {
-      console.log(error)
     }
   }
 
@@ -156,13 +155,32 @@ export class OcorrenciasPage implements OnInit {
     const ref = this.afStorage.ref(this.nomeImagem);
     const task = ref.put(blob);
 
-    task.snapshotChanges().pipe(
-        finalize(()=> this.downloadUri = ref.getDownloadURL())
-    ).subscribe()
+   task.snapshotChanges().pipe(
+       finalize(() =>{  this.downloadUri = ref.getDownloadURL(); this.mostraDetalhesImg()})
+   ).subscribe()
 
-    this.showToast('Sua Imagem foi enviada com sucesso')
+     this.showToast('Sua Imagem está sendo enviada, aguarde.');
+
 
   }
+
+  mostraDetalhesImg(){
+      this.downloadUri.subscribe(url => this.urlTransition = url )
+      this.showToast(`Sua Imagem foi enviada com Sucesso!`)
+      this.formularioPreenchido = !this.formularioPreenchido;
+  }
+
+  adicionarOcorrencia(){
+    this.ocorrencia.url = this.urlTransition
+    this.ocorrencia.data = Date.now()
+    this.firebaseService.addOcorrenia(this.ocorrencia).then(() => {
+      this.router.navigateByUrl('/ocorrencias');
+      this.showToast('Sua ocorrência foi enviada com sucesso para análise!')
+    }, err => {
+      this.showToast('Houve um erro ao enviar a ocorrência :(')
+    })
+  }
+
 
 
 }

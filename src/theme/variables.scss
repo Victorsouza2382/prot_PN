@@ -1,5 +1,6 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
+@import url('https://fonts.googleapis.com/css?family=Raleway:600');
 
 /** Ionic CSS Variables **/
 :root {
@@ -77,4 +78,7 @@
 
   /*  Cor Padrao do texto */
   --ion-text-color: #663300;
+
+  /* Fonte Padrao*/
+  --ion-font-family-base: 'DIN Alternate', sans-serif;
 }
