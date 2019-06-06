@@ -29,7 +29,7 @@ ion-icon{
   color: #0ec254;
 }
 
-ion-card{
+ion-card#cards{
   width: 100%;
   background: rgba(0, 0, 0, 0.1);
   border: #cccc33 solid 2px;
@@ -63,6 +63,7 @@ ion-footer div{
   flex-direction: row;
   align-items: center;
   justify-self: center;
+  margin-left: 40%;
 
 }
 
@@ -71,11 +72,11 @@ ion-footer div ion-icon{
 }
 
 
+
 #cards {
   animation-delay: 0s;
   -moz-animation-delay: 0s;
   -webkit-animation-delay: 0s;
-
   box-shadow: 2px 2px #2f2f2f;
 }
 

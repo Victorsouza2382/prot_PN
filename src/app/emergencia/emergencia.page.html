@@ -13,25 +13,35 @@
 
     <div class="botoesEmergencia">
       <ion-buttons>
-        <ion-button shape="round" fill="outline">Discar 190</ion-button>
+        <ion-button  fill="outline" expand="full">POLÍCIA 190</ion-button>
+        <ion-icon name="call"></ion-icon>
       </ion-buttons>
     </div>
 
     <div class="botoesEmergencia">
       <ion-buttons>
-        <ion-button shape="round" fill="outline">Discar 192</ion-button>
+        <ion-button fill="outline" expand="full">SAMU - 192</ion-button>
+        <ion-icon name="call"></ion-icon>
       </ion-buttons>
     </div>
 
     <div class="botoesEmergencia">
       <ion-buttons>
-        <ion-button shape="round" fill="outline">Polícia Ambiental</ion-button>
+        <ion-button  fill="outline" expand="full">CORPO DE BOMBEIROS - 193</ion-button>
+        <ion-icon name="call"></ion-icon>
       </ion-buttons>
     </div>
 
     <div class="botoesEmergencia">
       <ion-buttons>
-        <ion-button shape="round" fill="outline" (click)="addOcorrencias()">Enviar Ocorrência</ion-button>
+        <ion-button  fill="outline" expand="full">Administração PNB - 61.32334553</ion-button>
+        <ion-icon name="call"></ion-icon>
+      </ion-buttons>
+    </div>
+
+    <div class="botoesEmergencia">
+      <ion-buttons>
+        <ion-button  fill="outline" expand="full" (click)="addOcorrencias()">Enviar Ocorrência</ion-button>
       </ion-buttons>
     </div>
     <div id="cardAddOc" style="margin-top: 0" *ngIf="addOcorrencia">

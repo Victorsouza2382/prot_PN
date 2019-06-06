@@ -113,8 +113,8 @@ export class OcorrenciasPage implements OnInit {
 
     if(this.nomeImagem == undefined){
       this.nomeImagem = this.ocorrencia.nomeOcorrencia;
-      if(this.nomeImagem == undefined){
-      this.showToast('Preencha os campos abaixo primeiro') }
+      this.showToast('Preencha os campos abaixo primeiro')
+
     } else {
 
       const options: CameraOptions = {
